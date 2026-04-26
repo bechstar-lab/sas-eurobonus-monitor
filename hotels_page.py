@@ -1,0 +1,299 @@
+"""Hotells-side: viser kun bookede trips med hotell-anbefalinger per destinasjon."""
+from __future__ import annotations
+
+from datetime import datetime
+
+from jinja2 import Template
+
+import config
+from hotels import for_trip as hotels_for_trip, AIRPORT_TO_CITY
+
+
+# Strøk-/by-tips per destinasjon (statisk for nå, kan utvides)
+CITY_GUIDES = {
+    "JFK": {
+        "neighborhoods": [
+            ("Midtown Manhattan", "Sentralt, gå-avstand til alt — dyrt"),
+            ("Lower East Side", "Trendy, restauranter, billigere enn Midtown"),
+            ("Brooklyn (Williamsburg/DUMBO)", "Hipster-base, T-bane til Manhattan på 15 min"),
+            ("Upper West Side", "Familievennlig, nær Central Park"),
+        ],
+        "tips": [
+            "Subway 7-day pass = ca $34 → bruk det",
+            "Unngå Times Square-hoteller — overpriset, lite charm",
+            "Tipping: 18-20% restaurant, $1-2 drink, $5/dag rom",
+        ],
+    },
+    "EWR": {"same_as": "JFK"},
+    "BOS": {
+        "neighborhoods": [
+            ("Back Bay", "Sentral, går til alt"),
+            ("Cambridge", "Nær Harvard/MIT"),
+            ("Seaport", "Nytt, restauranter"),
+        ],
+        "tips": ["Subway = T. Charlie Card for besøkende"],
+    },
+    "MIA": {
+        "neighborhoods": [
+            ("South Beach", "Strand + nattliv"),
+            ("Brickell", "Business-strøk, høyhus"),
+            ("Wynwood", "Street art, gallerier"),
+        ],
+        "tips": ["Bilen er nesten obligatorisk for Florida-tur"],
+    },
+    "BKK": {
+        "neighborhoods": [
+            ("Sukhumvit (Asok/Phrom Phong)", "BTS-stasjoner, restauranter, mall — bra base"),
+            ("Silom/Sathorn", "Business-strøk, MRT, mer rolig om kvelden"),
+            ("Riverside (Saphan Taksin)", "Elvebåt, hoteller med utsikt — Mandarin Oriental m.m."),
+            ("Khao San / Banglamphu", "Backpacker, gamle byen — ikke for komfort"),
+        ],
+        "tips": [
+            "BTS Sky Train + MRT = dekker det meste. Grab-app for taxi.",
+            "Bedre å bo nær BTS-stasjon — trafikk i Bangkok er traumatisk",
+            "Sjekk Mandarin Oriental, Capella, Rosewood — ofte tilgjengelig på pts",
+        ],
+    },
+    "ICN": {
+        "neighborhoods": [
+            ("Myeongdong", "Shopping + sentralt"),
+            ("Gangnam", "Trendy, nightlife"),
+            ("Hongdae", "Universitet, ung scene"),
+            ("Itaewon", "Internasjonal, restauranter"),
+        ],
+        "tips": ["AREX flytog ICN→Seoul = 1t, billig", "T-money kort til T-bane"],
+    },
+    "NRT": {
+        "neighborhoods": [
+            ("Shinjuku", "Central, mange hoteller"),
+            ("Shibuya", "Scramble crossing, shopping"),
+            ("Ginza", "Luxury"),
+            ("Asakusa", "Tradisjonell"),
+        ],
+        "tips": [
+            "Narita Express (N'EX) eller Skyliner til Tokyo sentrum",
+            "JR Pass på forhånd hvis dere reiser videre i Japan",
+        ],
+    },
+    "HND": {"same_as": "NRT"},
+    "SCL": {
+        "neighborhoods": [
+            ("Providencia", "Trygt, restauranter, mid-range hoteller"),
+            ("Las Condes / El Golf", "Business, luxury"),
+            ("Bellavista", "Nightlife, kunst"),
+        ],
+        "tips": [
+            "Spansk hjelper. Kortbruk vanlig.",
+            "For Falklands-tur: husk LATAM SCL→MPN går lørdager",
+        ],
+    },
+}
+
+
+def _resolve_guide(airport: str) -> dict | None:
+    g = CITY_GUIDES.get(airport)
+    if g and "same_as" in g:
+        return CITY_GUIDES.get(g["same_as"])
+    return g
+
+
+TEMPLATE = Template("""<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<title>Hotell — SAS EuroBonus Monitor</title>
+<style>
+  :root {
+    --bg: #FAF7F2; --ink: #5C4B3A; --muted: #8a7a66;
+    --line: #e5ddd0; --card: #ffffff; --gold: #b58a4e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 24px; background: var(--bg); color: var(--ink);
+    font: 16px/1.5 Georgia, "EB Garamond", Garamond, serif;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  h1 { font-weight: 600; font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+  .meta a { color: var(--ink); }
+  h2 {
+    font-weight: 600; font-size: 14px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--muted);
+    margin: 36px 0 14px; border-bottom: 1px solid var(--line); padding-bottom: 6px;
+  }
+  .empty {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 30px; text-align: center; color: var(--muted);
+  }
+  .booked-trip {
+    background: var(--card); border: 1px solid var(--gold); border-radius: 10px;
+    padding: 18px 22px; margin: 14px 0;
+  }
+  .booked-trip h3 {
+    font: 600 18px Georgia,serif; margin: 0 0 6px; color: var(--gold);
+  }
+  .booked-trip .dates { color: var(--muted); margin-bottom: 14px; }
+  .links { font-family: -apple-system, sans-serif; font-size: 14px; }
+  .links a {
+    display: inline-block; margin: 0 14px 8px 0; color: var(--ink);
+    text-decoration: underline; text-decoration-color: var(--line);
+  }
+  .links a:hover { text-decoration-color: var(--ink); }
+  .guide {
+    background: var(--bg); padding: 12px 16px; border-radius: 8px; margin-top: 14px;
+    font-size: 13px;
+  }
+  .guide h4 {
+    font: 600 11px -apple-system, sans-serif; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 6px;
+  }
+  .guide ul { margin: 0 0 8px; padding-left: 20px; }
+  .guide li { margin-bottom: 4px; }
+  .guide li strong { color: var(--ink); }
+  .remove-btn {
+    float: right; background: transparent; border: 1px solid var(--line);
+    border-radius: 4px; padding: 4px 10px; cursor: pointer;
+    font: 11px -apple-system, sans-serif; color: var(--muted);
+  }
+  .remove-btn:hover { color: #a3565b; border-color: #a3565b; }
+</style>
+<script>
+  const lsKey = (k, id) => `${k}:${id}`;
+  function getLs(k, id) { return localStorage.getItem(lsKey(k, id)); }
+  function setLs(k, id, v) {
+    if (v === null) localStorage.removeItem(lsKey(k, id));
+    else localStorage.setItem(lsKey(k, id), v);
+  }
+
+  function loadBooked() {
+    const out = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (!key.startsWith('booked_data:')) continue;
+      try { out.push(JSON.parse(localStorage.getItem(key))); } catch(e){}
+    }
+    return out;
+  }
+
+  function unbookTrip(tripId) {
+    setLs('booked', tripId, null);
+    setLs('booked_data', tripId, null);
+    location.reload();
+  }
+
+  // Hotell-link-byggere (klient-side, i tilfelle siden serves statisk)
+  const HOTEL_CITIES = {{ airport_to_city|tojson }};
+  function bookingLink(airport, ci, co) {
+    const c = HOTEL_CITIES[airport] || {city: airport, ss_id: ''};
+    const p = new URLSearchParams({ss: c.city, checkin: ci, checkout: co,
+      group_adults: 2, no_rooms: 1, group_children: 0});
+    if (c.ss_id) { p.set('dest_id', c.ss_id); p.set('dest_type', 'city'); }
+    return 'https://www.booking.com/searchresults.html?' + p;
+  }
+  function hotelsLink(airport, ci, co) {
+    const c = HOTEL_CITIES[airport] || {city: airport};
+    return 'https://www.hotels.com/Hotel-Search?' + new URLSearchParams({destination: c.city, startDate: ci, endDate: co, adults: 2});
+  }
+  function airbnbLink(airport, ci, co) {
+    const c = HOTEL_CITIES[airport] || {city: airport};
+    return `https://www.airbnb.com/s/${encodeURIComponent(c.city)}/homes?` + new URLSearchParams({checkin: ci, checkout: co, adults: 2, query: c.city});
+  }
+  function googleLink(airport, ci, co) {
+    const c = HOTEL_CITIES[airport] || {city: airport};
+    return `https://www.google.com/travel/hotels/${encodeURIComponent(c.city)}?` + new URLSearchParams({q: 'hotels in ' + c.city, checkin: ci, checkout: co});
+  }
+  function expediaLink(airport, ci, co) {
+    const c = HOTEL_CITIES[airport] || {city: airport};
+    return 'https://www.expedia.com/Hotel-Search?' + new URLSearchParams({destination: c.city, startDate: ci, endDate: co, adults: 2});
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const trips = loadBooked();
+    const container = document.getElementById('booked-list');
+    const empty = document.getElementById('empty-state');
+    if (!trips.length) {
+      empty.style.display = 'block';
+      return;
+    }
+    empty.style.display = 'none';
+    trips.sort((a,b) => (a.out_date || '').localeCompare(b.out_date || ''));
+    for (const t of trips) {
+      const c = HOTEL_CITIES[t.dest_airport] || {city: t.dest_airport, country: ''};
+      const guide = (window.GUIDES || {})[t.dest_airport] || (window.GUIDES || {})[ (HOTEL_CITIES[t.dest_airport]||{}).same_as ];
+      const div = document.createElement('div');
+      div.className = 'booked-trip';
+      const cabinLabel = t.cabin === 'business' ? 'Business' : (t.cabin === 'premium_economy' ? 'Prem Eco' : 'Eco');
+      div.innerHTML = `
+        <button class="remove-btn" onclick="unbookTrip('${t.id}')">Fjern</button>
+        <h3>${t.dest} — ${c.city}, ${c.country}</h3>
+        <div class="dates">
+          <strong>${t.out_date}</strong> → <strong>${t.ret_date}</strong>
+          (${t.origin} ↔ ${t.dest_airport}, ${cabinLabel})
+        </div>
+        <div class="links">
+          <strong style="color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:6px;">Søk hotell</strong>
+          <a href="${bookingLink(t.dest_airport, t.out_date, t.ret_date)}" target="_blank">Booking.com →</a>
+          <a href="${hotelsLink(t.dest_airport, t.out_date, t.ret_date)}" target="_blank">Hotels.com →</a>
+          <a href="${airbnbLink(t.dest_airport, t.out_date, t.ret_date)}" target="_blank">Airbnb →</a>
+          <a href="${expediaLink(t.dest_airport, t.out_date, t.ret_date)}" target="_blank">Expedia →</a>
+          <a href="${googleLink(t.dest_airport, t.out_date, t.ret_date)}" target="_blank">Google Hotels →</a>
+        </div>
+        ${guide ? guideHtml(guide) : ''}
+      `;
+      container.appendChild(div);
+    }
+  });
+
+  function guideHtml(g) {
+    let html = '<div class="guide"><h4>Strøk å vurdere</h4><ul>';
+    for (const [name, desc] of g.neighborhoods || []) {
+      html += `<li><strong>${name}</strong> — ${desc}</li>`;
+    }
+    html += '</ul>';
+    if (g.tips && g.tips.length) {
+      html += '<h4>Tips</h4><ul>';
+      for (const t of g.tips) html += `<li>${t}</li>`;
+      html += '</ul>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  window.GUIDES = {{ guides|tojson }};
+</script>
+</head>
+<body>
+<div class="wrap">
+  <h1>Hotell — bookede reiser</h1>
+  <p class="meta">
+    <a href="/">← Tilbake til fly-monitor</a>
+    · Trips du har markert som booket vises her med hotell-søk forhåndsfylt.
+  </p>
+
+  <div id="empty-state" class="empty" style="display:none;">
+    Du har ingen bookede trips ennå.<br>
+    Gå til <a href="/">fly-monitoren</a>, marker en trip som booket, så dukker den opp her.
+  </div>
+
+  <div id="booked-list"></div>
+
+  <p class="meta" style="margin-top:40px;">Generert {{ generated }}</p>
+</div>
+</body>
+</html>
+""")
+
+
+def render() -> str:
+    html = TEMPLATE.render(
+        airport_to_city=AIRPORT_TO_CITY,
+        guides={k: v for k, v in CITY_GUIDES.items() if "same_as" not in v},
+        generated=datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+    )
+    out = config.OUTPUT_DIR / "hotels.html"
+    out.write_text(html)
+    return str(out)
+
+
+if __name__ == "__main__":
+    print(render())

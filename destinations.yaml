@@ -1,0 +1,85 @@
+# =============================================================
+#  SAS EuroBonus Monitor — destinasjons-kriterier
+# =============================================================
+#  Rediger denne filen for å styre hva monitoren leter etter.
+#  Etter endring: kjør `python run.py check` (ingen restart trengs).
+#
+#  Felt som kan settes på "defaults" eller per destinasjon:
+#    cabins:              [business, premium_economy]   # business først = prioritert
+#    min_seats:           2                             # vi vil ha to seter
+#    origin_priority:     [OSL, CPH, ARN, GOT]          # foretrukket rekkefølge
+#    trip_length_days:    {min: 5, max: 21}             # rundtur-vindu
+#    direct_only:         false                         # kun direkte ruter
+#    travel_window:       {start: 2026-06-01, end: 2027-12-31}
+#    booking_deadline:    2026-12-31                    # CT må brukes innen
+#    notes:               "fritt tekstfelt"
+#
+#  seats.aero følger kun direkte SAS-ruter. Hvis SAS ikke flyr direkte
+#  fra OSL til en destinasjon, marker `requires_connection: true` for
+#  manuell sjekk via dashboard-lenkene.
+# =============================================================
+
+defaults:
+  cabins: [business, premium_economy]   # Business hovedprio, W = sekundær
+  min_seats: 2
+  origin_priority: [OSL, CPH, ARN, GOT] # OSL først, CPH OK fallback
+  trip_length_days:
+    min: 5
+    max: 21
+  direct_only: false                    # connecting OK hvis ingen direkte
+  travel_window:
+    start: 2026-06-01
+    end: 2027-12-31                     # Reisedato kan være 2027
+  booking_deadline: 2026-12-31          # CT må brukes (booking) i 2026
+  alert_only_better_than: 80000         # Ikke varsle om dyrere enn dette pts/vei
+
+# -------------------------------------------------------------
+# Destinasjoner — fjern/endre/legg til som du vil
+# -------------------------------------------------------------
+destinations:
+
+  # === Nord-Amerika: 6-9 dgr (kun de aktuelle) ===
+  - name: New York
+    airports: [JFK, EWR]
+    trip_length_days: {min: 6, max: 9}
+    notes: "Klassisk weekend / 1-uke familietur. JFK > EWR pga lokasjon."
+
+  - name: Boston
+    airports: [BOS]
+    trip_length_days: {min: 6, max: 9}
+
+  - name: Florida
+    airports: [MIA]
+    trip_length_days: {min: 6, max: 9}
+    notes: "Lite tilgjengelighet (verifisert). Hold øye uansett."
+
+  # === Asia: 9-19 dgr — Y/W/J og kan booke for 1 person også ===
+  - name: Thailand
+    airports: [BKK]
+    trip_length_days: {min: 9, max: 19}
+    cabins: [business, premium_economy, economy]   # alle klasser aktuelt
+    min_seats: 1                                    # 1 sete OK (single også)
+    notes: "Vinterferie. Eco/Prem Eco også OK. 1 person også OK."
+
+  - name: Korea
+    airports: [ICN]
+    trip_length_days: {min: 9, max: 19}
+    cabins: [business, premium_economy, economy]
+    min_seats: 1
+
+  - name: Japan
+    airports: [NRT, HND]
+    trip_length_days: {min: 9, max: 19}
+    cabins: [business, premium_economy, economy]
+    min_seats: 1
+    requires_connection: true
+    notes: "Manuell sjekk — SAS flyr ikke direkte til Japan"
+
+  # === Sør-Amerika: alle klasser, 1 person OK ===
+  - name: Chile
+    airports: [SCL]
+    trip_length_days: {min: 8, max: 28}
+    cabins: [business, premium_economy, economy]
+    min_seats: 1
+    requires_connection: true
+    notes: "Drømmedestinasjon — krever 2-stops, sjekk manuelt"

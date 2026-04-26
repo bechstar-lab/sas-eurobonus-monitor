@@ -1,0 +1,12 @@
+.env
+.venv/
+logs/
+output/
+*.pyc
+__pycache__/
+
+# cache: behold seen.db + last_run.json så GitHub Actions kan dedupe på tvers av kjøringer
+cache/*
+!cache/.gitkeep
+!cache/seen.db
+!cache/last_run.json
