@@ -42,8 +42,8 @@ destinations:
   - name: New York
     airports: [JFK, EWR]
     trip_length_days: {min: 6, max: 9}
-    deprioritize: true                    # 1 booket allerede, kan vurdere flere men ikke topp
-    notes: "Klassisk weekend / 1-uke. JFK > EWR. Feb 2027 BOOKET."
+    hide_from_top: true                   # 1 booket — skjul helt fra topp
+    notes: "Klassisk weekend / 1-uke. JFK > EWR. Feb 2027 BOOKET — skjult fra topp."
 
   - name: Washington DC
     airports: [IAD]
@@ -71,8 +71,16 @@ destinations:
     trip_length_days: {min: 5, max: 14}
     cabins: [business, premium_economy, economy]
     min_seats: 1
-    deprioritize: true            # Ikke aktuelt for oss men holder under monitor
-    notes: "Lav prio. Tilgjengelighet ekstrem (200+ datoer 35k pts) hvis det blir aktuelt."
+    hide_from_top: true           # Ikke aktuelt — skjul fra topp
+    notes: "Skjult fra topp. Tilgjengelighet ekstrem (200+ datoer 35k pts) hvis ombestemmelse."
+
+  # SAS-direkte Mid-East som vi nettopp oppdaget
+  - name: Beirut
+    airports: [BEY]
+    trip_length_days: {min: 5, max: 14}
+    cabins: [business, premium_economy, economy]
+    min_seats: 1
+    notes: "🆕 Sjekket aldri før — SAS direkte CPH-BEY. Test neste sjekk."
 
   - name: Dubai
     airports: [DXB]
@@ -85,7 +93,8 @@ destinations:
     airports: [BOM]
     trip_length_days: {min: 9, max: 19}
     cabins: [business, economy]
-    notes: "Ny SAS-rute fra juni 2026. 31 datoer J 2+ for 60k pts ute."
+    hide_from_top: true                  # Lavere prio enn ren Asia-strand-tur
+    notes: "Skjult fra topp. Tilgjengelig hvis ombestemmelse: 31 datoer J 2+ for 60k pts ut + Y retur."
 
   - name: Phuket
     airports: [HKT]

@@ -578,7 +578,10 @@ def run_check() -> dict:
     pairs_dict = {name: [p.to_dict() for p in pairs] for name, pairs in trip_pairs.items()}
 
     # Topp-deals (beste på tvers av destinasjoner)
-    flat = [(name, p) for name, ps in trip_pairs.items() for p in ps]
+    # Filtrer ut destinasjoner som er hide_from_top
+    hidden_names = {d.name for d in config.DESTINATIONS if d.hide_from_top}
+    flat = [(name, p) for name, ps in trip_pairs.items() for p in ps
+            if name not in hidden_names]
     flat.sort(key=lambda x: x[1].score)
 
     # Verifiser top 15 ved å hente trip-detaljer per leg

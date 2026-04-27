@@ -28,6 +28,7 @@ class Destination:
     alert_only_better_than: int | None
     requires_connection: bool
     deprioritize: bool
+    hide_from_top: bool        # fullt ekskluder fra top deals + share view
     notes: str
 
     @property
@@ -81,6 +82,7 @@ def load() -> list[Destination]:
                 if merged.get("alert_only_better_than") else None,
             requires_connection=bool(merged.get("requires_connection", False)),
             deprioritize=bool(merged.get("deprioritize", False)),
+            hide_from_top=bool(merged.get("hide_from_top", False)),
             notes=str(merged.get("notes", "")),
         ))
     return out

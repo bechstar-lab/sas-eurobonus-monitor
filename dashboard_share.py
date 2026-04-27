@@ -198,6 +198,25 @@ TEMPLATE = Template("""<!doctype html>
 </div>
 {% endif %}
 
+{% if watching %}
+<div class="group">
+  <h2>🎯 Ønske-destinasjoner — venter på award-åpning</h2>
+  <div style="background:#fff8e1;border:1px solid #d2a04e;border-radius:10px;padding:14px 18px;font-family:-apple-system,sans-serif;font-size:13px;color:#6d5223;">
+    <p style="margin:0 0 10px;">
+      Disse er <strong>høyt ønsket</strong> men har ingen award-tilgjengelighet nå.
+      Monitoren sjekker hver 6. time — når SAS slipper sete, fanger vi det opp.
+    </p>
+    {% for w in watching %}
+    <div style="padding:6px 0;border-top:1px dashed #d2a04e;margin-top:6px;">
+      <strong style="font-size:14px;">{{ w.name }}</strong>
+      <span> — {{ w.airports|join('/') }}, {{ w.trip_min }}-{{ w.trip_max }} dgr</span><br>
+      <span style="font-style:italic;font-size:12px;">{{ w.notes }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
 {% for group_name, trips in groups %}
 {% if trips %}
 <div class="group" id="{{ group_name|lower|replace(' ','-') }}">
@@ -247,25 +266,6 @@ TEMPLATE = Template("""<!doctype html>
 <div class="empty">Ingen aktuelle reiser funnet i siste sjekk.</div>
 {% endif %}
 
-{% if watching %}
-<div class="group">
-  <h2>🎯 Ønske-destinasjoner — venter på award-åpning</h2>
-  <div style="background:#fff8e1;border:1px solid #d2a04e;border-radius:10px;padding:14px 18px;font-family:-apple-system,sans-serif;font-size:13px;color:#6d5223;">
-    <p style="margin:0 0 10px;">
-      Disse er <strong>høyt ønsket</strong> men har ingen award-tilgjengelighet nå.
-      Monitoren sjekker hver 6. time — når SAS slipper sete, fanger vi det opp.
-    </p>
-    {% for w in watching %}
-    <div style="padding:6px 0;border-top:1px dashed #d2a04e;margin-top:6px;">
-      <strong style="font-size:14px;">{{ w.name }}</strong>
-      <span> — {{ w.airports|join('/') }}, {{ w.trip_min }}-{{ w.trip_max }} dgr</span><br>
-      <span style="font-style:italic;font-size:12px;">{{ w.notes }}</span>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-{% endif %}
-
 {% if empty_dests %}
 <div class="group">
   <h2>Ikke noe akkurat nå</h2>
@@ -313,6 +313,9 @@ def render(last_run: dict | None = None) -> str:
     watching = []          # 🎯 ønske-destinasjoner som ikke har data ennå
     total = 0
     for dest in config.DESTINATIONS:
+        # Skjul fullstendig fra share view hvis hide_from_top
+        if dest.hide_from_top:
+            continue
         pairs = trip_pairs.get(dest.name, [])
         is_wishlist = "🎯" in (dest.notes or "")
 
