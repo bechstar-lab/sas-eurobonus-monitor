@@ -246,6 +246,25 @@ TEMPLATE = Template("""<!doctype html>
 <div class="empty">Ingen aktuelle reiser funnet i siste sjekk.</div>
 {% endif %}
 
+{% if watching %}
+<div class="group">
+  <h2>🎯 Ønske-destinasjoner — venter på award-åpning</h2>
+  <div style="background:#fff8e1;border:1px solid #d2a04e;border-radius:10px;padding:14px 18px;font-family:-apple-system,sans-serif;font-size:13px;color:#6d5223;">
+    <p style="margin:0 0 10px;">
+      Disse er <strong>høyt ønsket</strong> men har ingen award-tilgjengelighet nå.
+      Monitoren sjekker hver 6. time — når SAS slipper sete, fanger vi det opp.
+    </p>
+    {% for w in watching %}
+    <div style="padding:6px 0;border-top:1px dashed #d2a04e;margin-top:6px;">
+      <strong style="font-size:14px;">{{ w.name }}</strong>
+      <span> — {{ w.airports|join('/') }}, {{ w.trip_min }}-{{ w.trip_max }} dgr</span><br>
+      <span style="font-style:italic;font-size:12px;">{{ w.notes }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
 {% if empty_dests %}
 <div class="group">
   <h2>Ikke noe akkurat nå</h2>
@@ -290,9 +309,12 @@ def render(last_run: dict | None = None) -> str:
     trip_pairs = last_run.get("trip_pairs", {})
     groups = []
     empty_dests = []
+    watching = []          # 🎯 ønske-destinasjoner som ikke har data ennå
     total = 0
     for dest in config.DESTINATIONS:
         pairs = trip_pairs.get(dest.name, [])
+        is_wishlist = "🎯" in (dest.notes or "")
+
         if pairs:
             clean = [p for p in pairs if p.get("phantom_risk", "low") != "high"]
             top5 = clean[:5]
@@ -300,7 +322,16 @@ def render(last_run: dict | None = None) -> str:
                 groups.append((dest.name, top5))
                 total += len(top5)
                 continue
-        # Ingen par funnet — registrér med begrunnelse
+        # Ingen par funnet — kategoriser
+        if is_wishlist:
+            watching.append({
+                "name": dest.name,
+                "airports": dest.airports,
+                "notes": dest.notes,
+                "trip_min": dest.trip_min_days,
+                "trip_max": dest.trip_max_days,
+            })
+            continue
         if dest.requires_connection:
             reason = "krever connection (sjekkes manuelt)"
         else:
@@ -317,6 +348,7 @@ def render(last_run: dict | None = None) -> str:
         last_run=last_run,
         groups=groups,
         empty_dests=empty_dests,
+        watching=watching,
         trip_count=total,
         sas=_sas_link, fmt=_fmt, cabin_label=_cabin_label,
         generated=datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),

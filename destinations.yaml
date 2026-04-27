@@ -90,13 +90,26 @@ destinations:
     airports: [HKT]
     trip_length_days: {min: 9, max: 19}
     cabins: [business, economy]
-    notes: "Ny SAS-rute des 2026 - mar 2027 (vinter). A350."
+    notes: "🎯 ØNSKE-DESTINASJON Ny SAS-rute des 2026 - mar 2027 A350. Award ikke åpnet ennå — alert klar."
 
   - name: Krabi
     airports: [KBV]
     trip_length_days: {min: 9, max: 19}
     cabins: [business, economy]
-    notes: "Ny SAS-rute des 2026 - mar 2027 (vinter). 2/uke."
+    notes: "🎯 ØNSKE-DESTINASJON Ny SAS-rute des 2026 - mar 2027 (2/uke). Award ikke åpnet ennå."
+
+  - name: Bangkok-direct
+    airports: [BKK]
+    trip_length_days: {min: 9, max: 19}
+    cabins: [business, economy]
+    notes: "🎯 ØNSKE-DESTINASJON SAS direkte (hvis åpner). Pt 0 datoer."
+
+  - name: Japan
+    airports: [NRT, HND]
+    trip_length_days: {min: 9, max: 19}
+    cabins: [business, premium_economy, economy]
+    requires_connection: true
+    notes: "AF/KL har 50+ J 2+/mnd til Tokyo, men EuroBonus har 0 award-tilgang. Manuell sjekk via flysas.com hvis ønsket."
 
   # === Asia: 9-19 dgr — Y/W/J og kan booke for 1 person også ===
   - name: Thailand
@@ -111,14 +124,6 @@ destinations:
     trip_length_days: {min: 9, max: 19}
     cabins: [business, premium_economy, economy]
     min_seats: 1
-
-  - name: Japan
-    airports: [NRT, HND]
-    trip_length_days: {min: 9, max: 19}
-    cabins: [business, premium_economy, economy]
-    min_seats: 1
-    requires_connection: true
-    notes: "Manuell sjekk — SAS flyr ikke direkte til Japan"
 
   # === Sør-Amerika: alle klasser, 1 person OK ===
   - name: Chile
