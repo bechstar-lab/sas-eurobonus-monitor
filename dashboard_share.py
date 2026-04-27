@@ -160,7 +160,8 @@ TEMPLATE = Template("""<!doctype html>
 <p class="meta">
   Sist oppdatert {{ last_run.finished or '—' }} · {{ trip_count }} aktuelle reiser ·
   <a href="europa.html">Europa-priser →</a> ·
-  <a href="hotels.html">Hotell →</a>
+  <a href="hotels.html">Hotell →</a> ·
+  <a href="strategy.html">Strategi →</a>
 </p>
 
 <div class="intro">

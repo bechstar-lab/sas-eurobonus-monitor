@@ -1,0 +1,255 @@
+"""Strategi & innsikt-side med all akkumulert research."""
+from __future__ import annotations
+
+from datetime import datetime
+from jinja2 import Template
+
+import config
+
+
+TEMPLATE = Template("""<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<title>Strategi & innsikt — SAS EuroBonus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #FAF7F2; --ink: #5C4B3A; --muted: #8a7a66;
+    --line: #e5ddd0; --card: #ffffff; --gold: #b58a4e;
+    --green: #4a6f4a; --red: #a3565b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 16px; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 Georgia, "EB Garamond", Garamond, serif;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  h1 { font-weight: 600; font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+  .meta a { color: var(--ink); }
+  h2 {
+    font-weight: 600; font-size: 14px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--muted);
+    margin: 36px 0 10px; border-bottom: 1px solid var(--line); padding-bottom: 6px;
+  }
+  h3 { font-weight: 600; font-size: 17px; margin: 18px 0 6px; }
+  p { margin: 0 0 12px; }
+
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px 22px; margin: 12px 0;
+  }
+  .urgent { background: #fff8e1; border-color: #d2a04e; color: #6d5223; }
+  .warning { background: #f5e8e8; border-color: var(--red); color: #5e2e30; }
+  .good    { background: #e8eee4; border-color: var(--green); color: #2e4a2e; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; font-family: -apple-system, sans-serif; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .pts { color: var(--gold); font-weight: 600; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Strategi & innsikt</h1>
+<p class="meta">
+  <a href="/">← Fly-monitor</a> · <a href="europa.html">Europa</a> · <a href="hotels.html">Hotell</a> · Sist oppdatert {{ generated }}
+</p>
+
+<p>
+  Akkumulert kunnskap om EuroBonus, SAS-ruter, SkyTeam-tilgang og kort-strategier
+  basert på research april 2026.
+</p>
+
+<h2>⏰ Tidskritisk: AF-KLM kjøper SAS H2 2026</h2>
+
+<div class="card urgent">
+  <h3>Hva skjer</h3>
+  <ul>
+    <li>Air France-KLM blir <strong>majoritetseier (60.5%) i SAS</strong> i H2 2026</li>
+    <li>Loyalty-program-merger forventet etter det — EuroBonus → Flying Blue</li>
+    <li>Konvertering blir <strong>1:1</strong>, men kjøpekraft synker</li>
+    <li>Flying Blue har <strong>dynamisk prising</strong> — Business kan koste 2-3× mer</li>
+  </ul>
+  <h3>Konsekvens for oss</h3>
+  <ul>
+    <li><strong>Bruk pts før H2 2026.</strong> Israel/Mumbai/USA er bookbare nå.</li>
+    <li>Allerede booket: 1× NY (10-18 feb 2027 Business). Lekkasje-buffer.</li>
+    <li>Mamma 180k pts — vurder å bruke disse på Italia/Frankrike i 2026, før mergeren</li>
+    <li>Jonas 200k pts + CT — målrett mot konkrete bookinger 2026</li>
+  </ul>
+</div>
+
+<h2>📅 Ruter & tilgjengelighet — status april 2026</h2>
+
+<table>
+<thead>
+<tr><th>Destinasjon</th><th>SAS direkte</th><th>EB-bookbar?</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Israel (TLV)</strong></td><td>CPH-TLV</td><td class="pts">35k/vei J</td><td>🔥 3200+ par tilgjengelig</td></tr>
+<tr><td><strong>Mumbai (BOM)</strong></td><td>CPH-BOM (ny juni 2026)</td><td class="pts">60k/vei J ut, 30k Y retur</td><td>551 par</td></tr>
+<tr><td><strong>USA (NY/IAD/YYZ)</strong></td><td>Flere ruter</td><td class="pts">60k/vei J</td><td>Bra</td></tr>
+<tr><td><strong>Phuket (HKT)</strong></td><td>CPH-HKT (des 2026 - mar 2027)</td><td>0 datoer ennå</td><td>🎯 Venter på award-release</td></tr>
+<tr><td><strong>Krabi (KBV)</strong></td><td>CPH-KBV (des 2026 - mar 2027)</td><td>0 datoer ennå</td><td>🎯 Venter</td></tr>
+<tr><td><strong>Bangkok (BKK)</strong></td><td>Status uklar</td><td>0 datoer</td><td>🎯 Venter</td></tr>
+<tr><td><strong>Dubai (DXB)</strong></td><td>CPH-DXB (okt 2026 - mar 2027)</td><td>0 datoer ennå</td><td>🎯 Venter</td></tr>
+<tr><td>Japan (NRT/HND)</td><td>Nei</td><td>Stengt</td><td>AF/KL har plass men ikke EB</td></tr>
+<tr><td>Korea (ICN)</td><td>CPH-ICN</td><td>kun Y, 0 J</td><td>Lite verd</td></tr>
+<tr><td>Sør-Amerika</td><td>Nei</td><td>Stengt</td><td>Krever connection — kun cash</td></tr>
+</tbody>
+</table>
+
+<h2>💎 Sweet spots — hvor pts gir mest</h2>
+
+<div class="card good">
+  <h3>Israel via SAS direkte</h3>
+  <p>
+    <strong>35k pts hver vei Business</strong> = halvparten av USA. CPH-TLV direkte med 200+ datoer.
+    For 2 pax RT: 140k pts. <strong>Med Companion Ticket: 70k pts for 2 personer Business RT</strong>.
+    Tel Aviv er en absurd undervurdert destinasjon på poeng.
+  </p>
+</div>
+
+<div class="card good">
+  <h3>Mumbai (ny rute)</h3>
+  <p>
+    <strong>60k pts ut + 30k retur Y per pax</strong> = 90k pts pp RT. Ny SAS-rute fra juni 2026.
+    Med CT: ~90-120k for 2 pax. Asymmetrisk: Business ut, Eco hjem (men det er fortsatt verdi).
+  </p>
+</div>
+
+<div class="card good">
+  <h3>Intra-Skandinavia / Europa for Mamma</h3>
+  <p>
+    Mamma sine 180k pts = <strong>5-12 retur-turer Europa</strong>. Foretrukket bruk:
+  </p>
+  <ul>
+    <li><strong>15k pts Eco RT</strong> til Italia/Frankrike/Spania (300+ datoer per rute)</li>
+    <li>Sjekk kampanjer: 25-30% off skjer 2-4× per år</li>
+    <li>Beste pts/value: <strong>München / Vilnius på 10k Y / 20k J</strong></li>
+    <li>Unngå Frankfurt: 47k Y / 103k J = dårlig deal</li>
+  </ul>
+</div>
+
+<h2>🎫 Companion Ticket strategi</h2>
+
+<div class="card">
+  <p>Status:</p>
+  <ul>
+    <li>Mamma: <strong>1 CT brukt</strong> (NY feb 2027)</li>
+    <li>Jonas: <strong>1 CT igjen</strong> + 200k pts</li>
+  </ul>
+  <p>Strategier for siste CT:</p>
+  <ol>
+    <li><strong>Vent på Phuket/Krabi/BKK award-release</strong> — risiko: kanskje aldri kommer i Business på vår key</li>
+    <li><strong>Bruk på Israel</strong> — ferdig på pts, kanskje "for billig" til CT (35k er allerede billig)</li>
+    <li><strong>Bruk på USA West Coast</strong> — SFO/LAX i 2027 hvis dukker opp</li>
+    <li><strong>Bruk på Mumbai</strong> — solid valg hvis du vil til India</li>
+  </ol>
+</div>
+
+<h2>💳 Kort-vurdering</h2>
+
+<table>
+<thead><tr><th>Kort</th><th>Pris/år</th><th>Hovedfordel</th><th>For oss?</th></tr></thead>
+<tbody>
+<tr>
+  <td><strong>SAS Mastercard Premium</strong></td>
+  <td>~995 kr</td>
+  <td>Fly Premium: betal Eco-pts, fly Business</td>
+  <td>👀 <strong>Vurder</strong> — halverer Business-bookinger</td>
+</tr>
+<tr>
+  <td><strong>SAS Amex Elite</strong></td>
+  <td>6 900 kr</td>
+  <td>2-for-1 voucher (men nye = Eco only)</td>
+  <td>Allerede hatt — ikke nødvendig nå</td>
+</tr>
+<tr>
+  <td><strong>SAS Mastercard Standard</strong></td>
+  <td>~395 kr</td>
+  <td>Vanlig pts-opptjening</td>
+  <td>Lite verdi, hopp over</td>
+</tr>
+</tbody>
+</table>
+
+<div class="card">
+  <h3>Mastercard Premium — regnestykket</h3>
+  <p>
+    Krever <strong>75k EB-pts opptjent siste 12 mnd</strong> for laveste tier (50% rabatt).
+    Hvis Jonas booker 1 long-haul Business på 60k pts/vei = sparer 30k pts (≈3000-5000 NOK i pts-verdi).
+    Kortet koster 995 kr/år. <strong>Lønnsomt fra første Business-booking</strong>.
+  </p>
+</div>
+
+<h2>📈 Award-release-mønster (T-330 til T-14)</h2>
+
+<div class="card">
+  <ul>
+    <li><strong>T-330 (~11 mnd før):</strong> SAS slipper initial award-tilgjengelighet. 2 J-seter typisk.</li>
+    <li><strong>T-300 til T-30:</strong> Marginale endringer, dynamisk lukking/åpning</li>
+    <li><strong>T-21 til T-14:</strong> 🎯 <strong>Ekstra Business-sete slippes</strong> for å fylle uselgte. Beste vindu for last-minute J.</li>
+    <li><strong>T-7 til T-1:</strong> Status-medlemmer (Diamond/Gold) får tilgang til opgrade-pulje</li>
+  </ul>
+  <p>
+    For Phuket/Krabi som starter <strong>8. des 2026</strong>:
+    T-21 = ca <strong>17. nov 2026</strong>. Hvis monitoren ikke har funnet noe innen da,
+    settes "close-in monitor" på som sjekker hver dag.
+  </p>
+</div>
+
+<h2>⚠️ Restriksjoner & faktajusteringer</h2>
+
+<div class="card">
+  <ul>
+    <li><strong>SAS Imperva</strong>: blokkerer headless scraping av flysas.com booking-flow. Vi bruker seats.aero.</li>
+    <li><strong>seats.aero cache</strong>: 4-24 timer. Phantom availability kan forekomme — verifiser på SAS før jubel.</li>
+    <li><strong>EuroBonus til SkyTeam-Asia</strong>: Flying Blue/AF/KL har plass, men EB får ikke samme inventory.</li>
+    <li><strong>Companion Ticket post-april 2025</strong>: AwardFares hevder Eco-only, men dere brukte CT i Business på NY. Restriksjonen gjelder visst ikke alle CT-typer.</li>
+    <li><strong>RAF Brize Norton → Falklands</strong>: bookbar for sivile via FIGO London. ~£2200 RT. Ikke EB-eligible.</li>
+  </ul>
+</div>
+
+<h2>🎯 Anbefalt rekkefølge</h2>
+
+<div class="card good">
+  <ol>
+    <li><strong>Nå (april):</strong> Sjekk dashboardet 1-2× /uke. Top deals = Israel + Mumbai i 2026.</li>
+    <li><strong>Mai-juni:</strong> Vurder å booke Israel-tur (sept 2026) hvis fleksibel.</li>
+    <li><strong>Sommer 2026:</strong> Følg Phuket/Krabi-watcher. Ved første sete = book øyeblikkelig (24h gratis avbestilling).</li>
+    <li><strong>Sept-okt 2026:</strong> Hvis Asia ikke åpnet — vurder å bruke Jonas CT på USA West Coast (SFO/LAX) før AF-KLM merger.</li>
+    <li><strong>Nov 2026:</strong> Aktiver close-in monitor for last-minute Phuket/Krabi-release.</li>
+    <li><strong>2027:</strong> Mamma 180k pts — Italia/Frankrike-turer. Følg kampanjer.</li>
+  </ol>
+</div>
+
+<p class="meta" style="margin-top:40px;">
+  Generert {{ generated }}. Oppdatert ved hver scheduled check.
+</p>
+
+</div>
+</body>
+</html>
+""")
+
+
+def render() -> str:
+    html = TEMPLATE.render(
+        generated=datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+    )
+    out = config.OUTPUT_DIR / "strategy.html"
+    out.write_text(html)
+    return str(out)
+
+
+if __name__ == "__main__":
+    print(render())
