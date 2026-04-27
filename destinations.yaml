@@ -142,11 +142,11 @@ destinations:
     notes: "🎯 ØNSKE-DESTINASJON SAS direkte (hvis åpner). Pt 0 datoer."
 
   - name: Japan
-    airports: [NRT, HND]
+    airports: [HND, NRT]
     trip_length_days: {min: 9, max: 19}
     cabins: [business, premium_economy, economy]
-    requires_connection: true
-    notes: "AF/KL har 50+ J 2+/mnd til Tokyo, men EuroBonus har 0 award-tilgang. Manuell sjekk via flysas.com hvis ønsket."
+    min_seats: 1
+    notes: "🎯 ØNSKE-DESTINASJON SAS flyr CPH-HND direkte 4/uke (deres lengste flyging). Test EB-tilgjengelighet."
 
   # === Asia: 9-19 dgr — Y/W/J og kan booke for 1 person også ===
   - name: Thailand
@@ -161,6 +161,7 @@ destinations:
     trip_length_days: {min: 9, max: 19}
     cabins: [business, premium_economy, economy]
     min_seats: 1
+    notes: "🎯 ØNSKE SAS direkte CPH-ICN siden sept 2025, 6/uke fra juni 2026."
 
   # === Sør-Amerika: alle klasser, 1 person OK ===
   - name: Chile
