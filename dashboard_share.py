@@ -1,4 +1,36 @@
-<!doctype html>
+"""
+Forenklet visningsversjon for deling (mamma).
+Read-only: ingen filter, skip, book, kommentar — bare det som teller.
+"""
+from __future__ import annotations
+
+import json
+import logging
+from datetime import datetime
+
+from jinja2 import Template
+
+import config
+from urllib.parse import urlencode
+
+log = logging.getLogger("dashboard_share")
+
+
+def _sas_link(o, d, out, ret=None):
+    p = {"bookingFlow": "BONUS", "from": o, "to": d,
+         "outDate": out, "adt": 2, "chd": 0, "inf": 0}
+    if ret:
+        p["retDate"] = ret
+    return "https://www.flysas.com/en/book/flights/?" + urlencode(p)
+
+
+def _fmt(n):
+    if not n:
+        return "—"
+    return f"{n:,}".replace(",", " ")
+
+
+TEMPLATE = Template("""<!doctype html>
 <html lang="no">
 <head>
 <meta charset="utf-8">
@@ -126,7 +158,7 @@
 
 <h1>SAS EuroBonus award-deals</h1>
 <p class="meta">
-  Sist oppdatert 2026-04-26T21:26:13Z · 5 aktuelle reiser
+  Sist oppdatert {{ last_run.finished or '—' }} · {{ trip_count }} aktuelle reiser
 </p>
 
 <div class="intro">
@@ -156,188 +188,109 @@
   pris/dato, prøv en annen dato eller en annen rute fra listen under.
 </div>
 
-
+{% if groups %}
 <div class="toc">
   <strong>Hopp til</strong>
-  <a href="#new-york">New York (5)</a>
+  {% for name, ts in groups %}<a href="#{{ name|lower|replace(' ','-') }}">{{ name }} ({{ ts|length }})</a>{% endfor %}
 </div>
+{% endif %}
 
-
-
-
-<div class="group" id="new-york">
-  <h2>New York — 5 alternativer</h2>
-  
+{% for group_name, trips in groups %}
+{% if trips %}
+<div class="group" id="{{ group_name|lower|replace(' ','-') }}">
+  <h2>{{ group_name }} — {{ trips|length }} alternativer</h2>
+  {% for t in trips %}
   <div class="trip">
     <div class="head">
       <div class="route">
-        OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-        <span class="pill business">Business</span>
-        
+        {{ t.origin }}<span class="arrow">→</span>{{ t.dest_airport }}<span class="arrow">→</span>{{ t.origin }}
+        <span class="pill {{ t.cabin }}">{{ cabin_label(t.cabin) }}</span>
+        {% if t.out.stops == 'Direct' and t.ret.stops == 'Direct' %}<span class="pill direct">begge direkte</span>{% endif %}
       </div>
-      <div class="pts">120 000 pts · 9 dgr</div>
+      <div class="pts">{{ fmt(t.total_pts) }} pts · {{ t.trip_days }} dgr</div>
     </div>
 
     <div class="legs">
       <div class="leg">
         <div class="lbl">Ut</div>
-        <div class="when">2027-02-06</div>
-        <div class="stops">OSL → EWR · Direct
-          
+        <div class="when">{{ t.out.date }}</div>
+        <div class="stops">{{ t.out.origin }} → {{ t.out.destination }} · {{ t.out.stops or '?' }}
+          {% if t.out_details and t.out_details.verified %}
+            · {{ (t.out_details.total_journey_min // 60) }}t{{ '%02d'|format(t.out_details.total_journey_min % 60) }}m
+          {% endif %}
         </div>
       </div>
       <div class="leg">
         <div class="lbl">Hjem</div>
-        <div class="when">2027-02-15</div>
-        <div class="stops">EWR → OSL · 1+ stops
-          
+        <div class="when">{{ t.ret.date }}</div>
+        <div class="stops">{{ t.ret.origin }} → {{ t.ret.destination }} · {{ t.ret.stops or '?' }}
+          {% if t.ret_details and t.ret_details.verified %}
+            · {{ (t.ret_details.total_journey_min // 60) }}t{{ '%02d'|format(t.ret_details.total_journey_min % 60) }}m
+          {% endif %}
         </div>
       </div>
     </div>
 
-    <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-06&adt=2&chd=0&inf=0&retDate=2027-02-15" target="_blank">
+    <a class="booknow" href="{{ sas(t.out.origin, t.out.destination, t.out.date, t.ret.date) }}" target="_blank">
       Book på SAS →
     </a>
   </div>
-  
-  <div class="trip">
-    <div class="head">
-      <div class="route">
-        OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-        <span class="pill business">Business</span>
-        
-      </div>
-      <div class="pts">120 000 pts · 8 dgr</div>
-    </div>
-
-    <div class="legs">
-      <div class="leg">
-        <div class="lbl">Ut</div>
-        <div class="when">2027-02-09</div>
-        <div class="stops">OSL → EWR · 1+ stops
-          
-        </div>
-      </div>
-      <div class="leg">
-        <div class="lbl">Hjem</div>
-        <div class="when">2027-02-17</div>
-        <div class="stops">EWR → OSL · Direct
-          
-        </div>
-      </div>
-    </div>
-
-    <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-09&adt=2&chd=0&inf=0&retDate=2027-02-17" target="_blank">
-      Book på SAS →
-    </a>
-  </div>
-  
-  <div class="trip">
-    <div class="head">
-      <div class="route">
-        OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-        <span class="pill business">Business</span>
-        
-      </div>
-      <div class="pts">120 000 pts · 9 dgr</div>
-    </div>
-
-    <div class="legs">
-      <div class="leg">
-        <div class="lbl">Ut</div>
-        <div class="when">2027-02-09</div>
-        <div class="stops">OSL → EWR · 1+ stops
-          
-        </div>
-      </div>
-      <div class="leg">
-        <div class="lbl">Hjem</div>
-        <div class="when">2027-02-18</div>
-        <div class="stops">EWR → OSL · Direct
-          
-        </div>
-      </div>
-    </div>
-
-    <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-09&adt=2&chd=0&inf=0&retDate=2027-02-18" target="_blank">
-      Book på SAS →
-    </a>
-  </div>
-  
-  <div class="trip">
-    <div class="head">
-      <div class="route">
-        OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-        <span class="pill business">Business</span>
-        
-      </div>
-      <div class="pts">120 000 pts · 7 dgr</div>
-    </div>
-
-    <div class="legs">
-      <div class="leg">
-        <div class="lbl">Ut</div>
-        <div class="when">2027-02-10</div>
-        <div class="stops">OSL → EWR · 1+ stops
-          
-        </div>
-      </div>
-      <div class="leg">
-        <div class="lbl">Hjem</div>
-        <div class="when">2027-02-17</div>
-        <div class="stops">EWR → OSL · Direct
-          
-        </div>
-      </div>
-    </div>
-
-    <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-10&adt=2&chd=0&inf=0&retDate=2027-02-17" target="_blank">
-      Book på SAS →
-    </a>
-  </div>
-  
-  <div class="trip">
-    <div class="head">
-      <div class="route">
-        OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-        <span class="pill business">Business</span>
-        
-      </div>
-      <div class="pts">120 000 pts · 8 dgr</div>
-    </div>
-
-    <div class="legs">
-      <div class="leg">
-        <div class="lbl">Ut</div>
-        <div class="when">2027-02-10</div>
-        <div class="stops">OSL → EWR · 1+ stops
-          
-        </div>
-      </div>
-      <div class="leg">
-        <div class="lbl">Hjem</div>
-        <div class="when">2027-02-18</div>
-        <div class="stops">EWR → OSL · Direct
-          
-        </div>
-      </div>
-    </div>
-
-    <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-10&adt=2&chd=0&inf=0&retDate=2027-02-18" target="_blank">
-      Book på SAS →
-    </a>
-  </div>
-  
+  {% endfor %}
 </div>
+{% endif %}
+{% endfor %}
 
-
-
-
+{% if trip_count == 0 %}
+<div class="empty">Ingen aktuelle reiser funnet i siste sjekk.</div>
+{% endif %}
 
 <p class="meta" style="margin-top:40px;text-align:center;">
-  Generert 2026-04-27 07:48 UTC
+  Generert {{ generated }}
 </p>
 
 </div>
 </body>
 </html>
+""")
+
+
+def _cabin_label(c):
+    return {"business": "Business", "premium_economy": "Premium Eco", "economy": "Economy"}.get(c, c)
+
+
+def render(last_run: dict | None = None) -> str:
+    if last_run is None:
+        if config.LAST_RUN_PATH.exists():
+            last_run = json.loads(config.LAST_RUN_PATH.read_text())
+        else:
+            last_run = {"finished": None, "trip_pairs": {}, "top_deals": []}
+
+    # Grupper trips per destinasjon, vis topp 5 per gruppe
+    trip_pairs = last_run.get("trip_pairs", {})
+    groups = []
+    total = 0
+    for dest_name in [d.name for d in config.DESTINATIONS]:
+        pairs = trip_pairs.get(dest_name, [])
+        if pairs:
+            # Drop høy-risk phantoms i shared view
+            clean = [p for p in pairs if p.get("phantom_risk", "low") != "high"]
+            top5 = clean[:5]
+            if top5:
+                groups.append((dest_name, top5))
+                total += len(top5)
+
+    html = TEMPLATE.render(
+        last_run=last_run,
+        groups=groups,
+        trip_count=total,
+        sas=_sas_link, fmt=_fmt, cabin_label=_cabin_label,
+        generated=datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+    )
+    out = config.OUTPUT_DIR / "share.html"
+    out.write_text(html)
+    log.info("Share-dashboard skrevet til %s", out)
+    return str(out)
+
+
+if __name__ == "__main__":
+    print(render())
