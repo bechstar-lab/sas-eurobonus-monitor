@@ -8,7 +8,7 @@ from dataclasses import dataclass, field, asdict
 from datetime import date, datetime
 from typing import Iterable
 
-from destinations import Destination
+from destinations import Destination, is_trip_booked
 from monitor import Flight
 
 
@@ -162,6 +162,14 @@ def pair_for_destination(dest: Destination, flights: list[Flight]) -> list[TripP
             elif risk == "high":
                 score += 5000
                 notes.append(f"Data {max_age:.0f}t gammel — sjekk SAS før booking")
+
+            # Deprioritere destinasjoner (e.g. allerede booket noe der)
+            if dest.deprioritize:
+                score += 10000
+
+            # Skip allerede bookede trips
+            if is_trip_booked(o.origin, o.destination, o.date, r.date, o.cabin):
+                continue
 
             pairs.append(TripPair(
                 destination=dest.name,

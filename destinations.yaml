@@ -38,20 +38,65 @@ defaults:
 # -------------------------------------------------------------
 destinations:
 
-  # === Nord-Amerika: 6-9 dgr (kun de aktuelle) ===
+  # === Nord-Amerika: 6-9 dgr ===
   - name: New York
     airports: [JFK, EWR]
     trip_length_days: {min: 6, max: 9}
-    notes: "Klassisk weekend / 1-uke familietur. JFK > EWR pga lokasjon."
+    deprioritize: true                    # 1 booket allerede, kan vurdere flere men ikke topp
+    notes: "Klassisk weekend / 1-uke. JFK > EWR. Feb 2027 BOOKET."
 
-  - name: Boston
-    airports: [BOS]
+  - name: Washington DC
+    airports: [IAD]
     trip_length_days: {min: 6, max: 9}
+    notes: "23 datoer J 2+ for 60k pts ute. Retur Y mest tilgjengelig."
+
+  - name: Toronto
+    airports: [YYZ]
+    trip_length_days: {min: 6, max: 9}
+    notes: "Canada. 29 datoer J 2+ for 60k pts. Retur kun Y."
+
+  - name: Seattle
+    airports: [SEA]
+    trip_length_days: {min: 6, max: 12}
+    notes: "Pacific NW + nær Canada/British Columbia."
 
   - name: Florida
     airports: [MIA]
     trip_length_days: {min: 6, max: 9}
     notes: "Lite tilgjengelighet (verifisert). Hold øye uansett."
+
+  # === Midtøsten: BANG FOR BUCK 🔥 ===
+  - name: Israel
+    airports: [TLV]
+    trip_length_days: {min: 5, max: 14}
+    cabins: [business, premium_economy, economy]
+    min_seats: 1
+    notes: "🔥 EKSTREM BANG: 200+ datoer J 2+ for 35k pts/vei. Halv pris av USA."
+
+  - name: Dubai
+    airports: [DXB]
+    trip_length_days: {min: 5, max: 14}
+    cabins: [business, economy]
+    notes: "Ny rute fra okt 2026 (vinter). Daglig CPH-DXB."
+
+  # === Asia: SAS direkte (NYE!) ===
+  - name: Mumbai
+    airports: [BOM]
+    trip_length_days: {min: 9, max: 19}
+    cabins: [business, economy]
+    notes: "Ny SAS-rute fra juni 2026. 31 datoer J 2+ for 60k pts ute."
+
+  - name: Phuket
+    airports: [HKT]
+    trip_length_days: {min: 9, max: 19}
+    cabins: [business, economy]
+    notes: "Ny SAS-rute des 2026 - mar 2027 (vinter). A350."
+
+  - name: Krabi
+    airports: [KBV]
+    trip_length_days: {min: 9, max: 19}
+    cabins: [business, economy]
+    notes: "Ny SAS-rute des 2026 - mar 2027 (vinter). 2/uke."
 
   # === Asia: 9-19 dgr — Y/W/J og kan booke for 1 person også ===
   - name: Thailand

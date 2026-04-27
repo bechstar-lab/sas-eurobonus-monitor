@@ -386,18 +386,18 @@
 <h1>SAS EuroBonus Monitor</h1>
 <div class="toolbar">
   <button class="refresh" onclick="refresh(this)">Sjekk på nytt</button>
-  <span class="freshness" data-iso="2026-04-26T21:26:13Z">2026-04-26T21:26:13Z</span>
+  <span class="freshness" data-iso="2026-04-27T08:45:42Z">2026-04-27T08:45:42Z</span>
 </div>
 <p class="meta">
-  Sist sjekket 2026-04-26T21:26:13Z ·
+  Sist sjekket 2026-04-27T08:45:42Z ·
   seats.aero API ✓ ·
   CT-deadline: 2026-12-31
 </p>
 
 <div class="stats">
-  <div class="stat"><span class="num">4710</span><span class="lbl">flights tilgjengelig</span></div>
-  <div class="stat"><span class="num">88</span><span class="lbl">trip-par funnet</span></div>
-  <div class="stat"><span class="num">7</span><span class="lbl">destinasjoner</span></div>
+  <div class="stat"><span class="num">6375</span><span class="lbl">flights tilgjengelig</span></div>
+  <div class="stat"><span class="num">3821</span><span class="lbl">trip-par funnet</span></div>
+  <div class="stat"><span class="num">14</span><span class="lbl">destinasjoner</span></div>
   <div class="stat"><span class="num">0</span><span class="lbl">siste alerts</span></div>
 </div>
 
@@ -427,14 +427,56 @@
     </div>
     
     <div style="border-left:2px solid var(--line);padding-left:10px;">
-      <strong>Boston</strong> — BOS<br>
+      <strong>Washington DC</strong> — IAD<br>
       <span>6-9 dgr · fra OSL/CPH/ARN/GOT</span>
+      
+    </div>
+    
+    <div style="border-left:2px solid var(--line);padding-left:10px;">
+      <strong>Toronto</strong> — YYZ<br>
+      <span>6-9 dgr · fra OSL/CPH/ARN/GOT</span>
+      
+    </div>
+    
+    <div style="border-left:2px solid var(--line);padding-left:10px;">
+      <strong>Seattle</strong> — SEA<br>
+      <span>6-12 dgr · fra OSL/CPH/ARN/GOT</span>
       
     </div>
     
     <div style="border-left:2px solid var(--line);padding-left:10px;">
       <strong>Florida</strong> — MIA<br>
       <span>6-9 dgr · fra OSL/CPH/ARN/GOT</span>
+      
+    </div>
+    
+    <div style="border-left:2px solid var(--line);padding-left:10px;">
+      <strong>Israel</strong> — TLV<br>
+      <span>5-14 dgr · fra OSL/CPH/ARN/GOT</span>
+      
+    </div>
+    
+    <div style="border-left:2px solid var(--line);padding-left:10px;">
+      <strong>Dubai</strong> — DXB<br>
+      <span>5-14 dgr · fra OSL/CPH/ARN/GOT</span>
+      
+    </div>
+    
+    <div style="border-left:2px solid var(--line);padding-left:10px;">
+      <strong>Mumbai</strong> — BOM<br>
+      <span>9-19 dgr · fra OSL/CPH/ARN/GOT</span>
+      
+    </div>
+    
+    <div style="border-left:2px solid var(--line);padding-left:10px;">
+      <strong>Phuket</strong> — HKT<br>
+      <span>9-19 dgr · fra OSL/CPH/ARN/GOT</span>
+      
+    </div>
+    
+    <div style="border-left:2px solid var(--line);padding-left:10px;">
+      <strong>Krabi</strong> — KBV<br>
+      <span>9-19 dgr · fra OSL/CPH/ARN/GOT</span>
       
     </div>
     
@@ -471,7 +513,7 @@
     <label>Destinasjon</label>
     <select id="f-dest" onchange="applyFilters()">
       <option value="">Alle</option>
-      <option>New York</option><option>Boston</option><option>Florida</option><option>Thailand</option><option>Korea</option><option>Japan</option><option>Chile</option>
+      <option>New York</option><option>Washington DC</option><option>Toronto</option><option>Seattle</option><option>Florida</option><option>Israel</option><option>Dubai</option><option>Mumbai</option><option>Phuket</option><option>Krabi</option><option>Thailand</option><option>Korea</option><option>Japan</option><option>Chile</option>
     </select>
   </span>
   <span>
@@ -507,44 +549,44 @@
 
 
 <div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-06|2027-02-15|business"
-     data-dest="New York"
-     data-origin="OSL"
+     data-trip-id="Israel|CPHTLV|2026-09-20|2026-09-30|business"
+     data-dest="Israel"
+     data-origin="CPH"
      data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-06"
-     data-retdate="2027-02-15">
+     data-direct="1"
+     data-outdate="2026-09-20"
+     data-retdate="2026-09-30">
   <div class="head">
     <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
       <span class="pill business">Business</span>
+      <span class="pill direct">Begge direkte</span>
       
-      <span class="pill risk-medium">stale 17.9t</span>
       
     </div>
-    <div class="pts">120 000 pts · 9 dgr · New York</div>
+    <div class="pts">70 000 pts · 10 dgr · Israel</div>
   </div>
   <div class="legs">
     
     <div class="leg">
       <div class="lbl">Ut</div>
-      <div class="when">2027-02-06 · OSL → EWR</div>
-      <div class="meta">1 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T18:35:50.335614Z"></span>
+      <div class="when">2026-09-20 · CPH → TLV</div>
+      <div class="meta">9 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:56.074353Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 8t 40m
-        (8t 40m fly,
+        Total 4t 30m
+        (4t 30m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">10:45–13:25</span>
-          <span class="route">OSL→EWR</span>
-          <span class="meta">SK907 · Airbus A321neo · 8t40m · business</span>
+          <span class="time">06:05–11:35</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · business</span>
         </div>
         
         
@@ -554,151 +596,23 @@
     
     <div class="leg">
       <div class="lbl">Hjem</div>
-      <div class="when">2027-02-15 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:24.483437Z"></span>
+      <div class="when">2026-09-30 · TLV → CPH</div>
+      <div class="meta">6 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.366768Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 17t 40m
-        (8t 50m fly,
-         8t 50m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">17:40–07:30</span>
-          <span class="route">EWR→ARN</span>
-          <span class="meta">SK904 · Airbus A330-300 · 7t50m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover long">
-            ↳ ARN · 8t 50m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">16:20–17:20</span>
-          <span class="route">ARN→OSL</span>
-          <span class="meta">SK491 · Airbus A320neo · 1t00m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-06&adt=2&chd=0&inf=0&retDate=2027-02-15" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-06|2027-02-15|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-06|2027-02-15|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-06|2027-02-15|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-06|2027-02-15|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-06|2027-02-15|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Ret: connecting</div>
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-09|2027-02-17|business"
-     data-dest="New York"
-     data-origin="OSL"
-     data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-09"
-     data-retdate="2027-02-17">
-  <div class="head">
-    <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-      <span class="pill business">Business</span>
-      
-      <span class="pill risk-medium">stale 22.6t</span>
-      
-    </div>
-    <div class="pts">120 000 pts · 8 dgr · New York</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-02-09 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-25T22:51:42.986657Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 22t 05m
-        (9t 55m fly,
-         12t 10m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">21:30–22:35</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK1488 · Airbus A320neo · 1t05m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover long">
-            ↳ ARN · 12t 10m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-02-17 · EWR → OSL</div>
-      <div class="meta">1 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:23.338218Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 45m
+        (4t 45m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · business</span>
         </div>
         
         
@@ -707,200 +621,72 @@
     </div>
     
   </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-09&adt=2&chd=0&inf=0&retDate=2027-02-17" target="_blank">
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-20&adt=2&chd=0&inf=0&retDate=2026-09-30" target="_blank">
     Book fly på SAS →
   </a>
   <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
   </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-09|2027-02-17|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-09|2027-02-17|business', this)">Ikke aktuell</button>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-20|2026-09-30|business', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-20|2026-09-30|business', this)">Ikke aktuell</button>
   <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
     ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
   </span>
 
   <div class="feedback">
     <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-09|2027-02-17|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-09|2027-02-17|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-20|2026-09-30|business','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-20|2026-09-30|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
     </span>
     <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-09|2027-02-17|business', this)"></textarea>
+              onblur="saveComment('Israel|CPHTLV|2026-09-20|2026-09-30|business', this)"></textarea>
     <span class="saved"></span>
   </div>
 
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
+  
 </div>
 
 
 
 <div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-09|2027-02-18|business"
-     data-dest="New York"
-     data-origin="OSL"
+     data-trip-id="Israel|CPHTLV|2026-09-20|2026-10-01|business"
+     data-dest="Israel"
+     data-origin="CPH"
      data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-09"
-     data-retdate="2027-02-18">
+     data-direct="1"
+     data-outdate="2026-09-20"
+     data-retdate="2026-10-01">
   <div class="head">
     <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
       <span class="pill business">Business</span>
+      <span class="pill direct">Begge direkte</span>
       
-      <span class="pill risk-medium">stale 22.6t</span>
       
     </div>
-    <div class="pts">120 000 pts · 9 dgr · New York</div>
+    <div class="pts">70 000 pts · 11 dgr · Israel</div>
   </div>
   <div class="legs">
     
     <div class="leg">
       <div class="lbl">Ut</div>
-      <div class="when">2027-02-09 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-25T22:51:42.986657Z"></span>
+      <div class="when">2026-09-20 · CPH → TLV</div>
+      <div class="meta">9 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:56.074353Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 22t 05m
-        (9t 55m fly,
-         12t 10m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">21:30–22:35</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK1488 · Airbus A320neo · 1t05m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover long">
-            ↳ ARN · 12t 10m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-02-18 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:22.983651Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 30m
+        (4t 30m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-09&adt=2&chd=0&inf=0&retDate=2027-02-18" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-09|2027-02-18|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-09|2027-02-18|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-09|2027-02-18|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-09|2027-02-18|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-09|2027-02-18|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-10|2027-02-17|business"
-     data-dest="New York"
-     data-origin="OSL"
-     data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-10"
-     data-retdate="2027-02-17">
-  <div class="head">
-    <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-      <span class="pill business">Business</span>
-      
-      <span class="pill risk-medium">stale 17.9t</span>
-      
-    </div>
-    <div class="pts">120 000 pts · 7 dgr · New York</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-02-10 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T03:37:43.003659Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 22t 05m
-        (9t 55m fly,
-         12t 10m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">21:30–22:35</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK1488 · Airbus A320neo · 1t05m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover long">
-            ↳ ARN · 12t 10m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
+          <span class="time">06:05–11:35</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · business</span>
         </div>
         
         
@@ -910,23 +696,23 @@
     
     <div class="leg">
       <div class="lbl">Hjem</div>
-      <div class="when">2027-02-17 · EWR → OSL</div>
-      <div class="meta">1 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:23.338218Z"></span>
+      <div class="when">2026-10-01 · TLV → CPH</div>
+      <div class="meta">6 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.795769Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 45m
+        (4t 45m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · business</span>
         </div>
         
         
@@ -935,200 +721,72 @@
     </div>
     
   </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-10&adt=2&chd=0&inf=0&retDate=2027-02-17" target="_blank">
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-20&adt=2&chd=0&inf=0&retDate=2026-10-01" target="_blank">
     Book fly på SAS →
   </a>
   <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
   </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-10|2027-02-17|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-10|2027-02-17|business', this)">Ikke aktuell</button>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-20|2026-10-01|business', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-20|2026-10-01|business', this)">Ikke aktuell</button>
   <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
     ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
   </span>
 
   <div class="feedback">
     <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-10|2027-02-17|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-10|2027-02-17|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-20|2026-10-01|business','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-20|2026-10-01|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
     </span>
     <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-10|2027-02-17|business', this)"></textarea>
+              onblur="saveComment('Israel|CPHTLV|2026-09-20|2026-10-01|business', this)"></textarea>
     <span class="saved"></span>
   </div>
 
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
+  
 </div>
 
 
 
 <div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-10|2027-02-18|business"
-     data-dest="New York"
-     data-origin="OSL"
+     data-trip-id="Israel|CPHTLV|2026-09-21|2026-09-30|business"
+     data-dest="Israel"
+     data-origin="CPH"
      data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-10"
-     data-retdate="2027-02-18">
+     data-direct="1"
+     data-outdate="2026-09-21"
+     data-retdate="2026-09-30">
   <div class="head">
     <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
       <span class="pill business">Business</span>
+      <span class="pill direct">Begge direkte</span>
       
-      <span class="pill risk-medium">stale 17.9t</span>
       
     </div>
-    <div class="pts">120 000 pts · 8 dgr · New York</div>
+    <div class="pts">70 000 pts · 9 dgr · Israel</div>
   </div>
   <div class="legs">
     
     <div class="leg">
       <div class="lbl">Ut</div>
-      <div class="when">2027-02-10 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T03:37:43.003659Z"></span>
+      <div class="when">2026-09-21 · CPH → TLV</div>
+      <div class="meta">8 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:56.279812Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 22t 05m
-        (9t 55m fly,
-         12t 10m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">21:30–22:35</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK1488 · Airbus A320neo · 1t05m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover long">
-            ↳ ARN · 12t 10m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-02-18 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:22.983651Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 30m
+        (4t 30m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-10&adt=2&chd=0&inf=0&retDate=2027-02-18" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-10|2027-02-18|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-10|2027-02-18|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-10|2027-02-18|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-10|2027-02-18|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-10|2027-02-18|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-10|2027-02-19|business"
-     data-dest="New York"
-     data-origin="OSL"
-     data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-10"
-     data-retdate="2027-02-19">
-  <div class="head">
-    <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-      <span class="pill business">Business</span>
-      
-      <span class="pill risk-medium">stale 17.9t</span>
-      
-    </div>
-    <div class="pts">120 000 pts · 9 dgr · New York</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-02-10 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T03:37:43.003659Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 22t 05m
-        (9t 55m fly,
-         12t 10m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">21:30–22:35</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK1488 · Airbus A320neo · 1t05m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover long">
-            ↳ ARN · 12t 10m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · business</span>
         </div>
         
         
@@ -1138,23 +796,23 @@
     
     <div class="leg">
       <div class="lbl">Hjem</div>
-      <div class="when">2027-02-19 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:21.697032Z"></span>
+      <div class="when">2026-09-30 · TLV → CPH</div>
+      <div class="meta">6 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.366768Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 45m
+        (4t 45m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · business</span>
         </div>
         
         
@@ -1163,200 +821,72 @@
     </div>
     
   </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-10&adt=2&chd=0&inf=0&retDate=2027-02-19" target="_blank">
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-21&adt=2&chd=0&inf=0&retDate=2026-09-30" target="_blank">
     Book fly på SAS →
   </a>
   <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
   </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-10|2027-02-19|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-10|2027-02-19|business', this)">Ikke aktuell</button>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-21|2026-09-30|business', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-21|2026-09-30|business', this)">Ikke aktuell</button>
   <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
     ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
   </span>
 
   <div class="feedback">
     <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-10|2027-02-19|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-10|2027-02-19|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-21|2026-09-30|business','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-21|2026-09-30|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
     </span>
     <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-10|2027-02-19|business', this)"></textarea>
+              onblur="saveComment('Israel|CPHTLV|2026-09-21|2026-09-30|business', this)"></textarea>
     <span class="saved"></span>
   </div>
 
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
+  
 </div>
 
 
 
 <div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-11|2027-02-17|business"
-     data-dest="New York"
-     data-origin="OSL"
+     data-trip-id="Israel|CPHTLV|2026-09-21|2026-10-01|business"
+     data-dest="Israel"
+     data-origin="CPH"
      data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-11"
-     data-retdate="2027-02-17">
+     data-direct="1"
+     data-outdate="2026-09-21"
+     data-retdate="2026-10-01">
   <div class="head">
     <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
       <span class="pill business">Business</span>
+      <span class="pill direct">Begge direkte</span>
       
-      <span class="pill risk-medium">stale 17.9t</span>
       
     </div>
-    <div class="pts">120 000 pts · 6 dgr · New York</div>
+    <div class="pts">70 000 pts · 10 dgr · Israel</div>
   </div>
   <div class="legs">
     
     <div class="leg">
       <div class="lbl">Ut</div>
-      <div class="when">2027-02-11 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T17:58:52.159542Z"></span>
+      <div class="when">2026-09-21 · CPH → TLV</div>
+      <div class="meta">8 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:56.279812Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 12t 25m
-        (10t 00m fly,
-         2t 25m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">07:10–08:20</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK844 · Airbus A320neo · 1t10m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover ">
-            ↳ ARN · 2t 25m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-02-17 · EWR → OSL</div>
-      <div class="meta">1 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:23.338218Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 30m
+        (4t 30m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-11&adt=2&chd=0&inf=0&retDate=2027-02-17" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-11|2027-02-17|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-11|2027-02-17|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-11|2027-02-17|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-11|2027-02-17|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-11|2027-02-17|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-11|2027-02-18|business"
-     data-dest="New York"
-     data-origin="OSL"
-     data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-11"
-     data-retdate="2027-02-18">
-  <div class="head">
-    <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-      <span class="pill business">Business</span>
-      
-      <span class="pill risk-medium">stale 17.9t</span>
-      
-    </div>
-    <div class="pts">120 000 pts · 7 dgr · New York</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-02-11 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T17:58:52.159542Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 12t 25m
-        (10t 00m fly,
-         2t 25m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">07:10–08:20</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK844 · Airbus A320neo · 1t10m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover ">
-            ↳ ARN · 2t 25m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · business</span>
         </div>
         
         
@@ -1366,23 +896,23 @@
     
     <div class="leg">
       <div class="lbl">Hjem</div>
-      <div class="when">2027-02-18 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:22.983651Z"></span>
+      <div class="when">2026-10-01 · TLV → CPH</div>
+      <div class="meta">6 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.795769Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 45m
+        (4t 45m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · business</span>
         </div>
         
         
@@ -1391,200 +921,72 @@
     </div>
     
   </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-11&adt=2&chd=0&inf=0&retDate=2027-02-18" target="_blank">
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-21&adt=2&chd=0&inf=0&retDate=2026-10-01" target="_blank">
     Book fly på SAS →
   </a>
   <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
   </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-11|2027-02-18|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-11|2027-02-18|business', this)">Ikke aktuell</button>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-21|2026-10-01|business', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-21|2026-10-01|business', this)">Ikke aktuell</button>
   <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
     ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
   </span>
 
   <div class="feedback">
     <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-11|2027-02-18|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-11|2027-02-18|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-21|2026-10-01|business','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-21|2026-10-01|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
     </span>
     <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-11|2027-02-18|business', this)"></textarea>
+              onblur="saveComment('Israel|CPHTLV|2026-09-21|2026-10-01|business', this)"></textarea>
     <span class="saved"></span>
   </div>
 
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
+  
 </div>
 
 
 
 <div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-11|2027-02-19|business"
-     data-dest="New York"
-     data-origin="OSL"
+     data-trip-id="Israel|CPHTLV|2026-09-23|2026-09-30|business"
+     data-dest="Israel"
+     data-origin="CPH"
      data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-11"
-     data-retdate="2027-02-19">
+     data-direct="1"
+     data-outdate="2026-09-23"
+     data-retdate="2026-09-30">
   <div class="head">
     <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
       <span class="pill business">Business</span>
+      <span class="pill direct">Begge direkte</span>
       
-      <span class="pill risk-medium">stale 17.9t</span>
       
     </div>
-    <div class="pts">120 000 pts · 8 dgr · New York</div>
+    <div class="pts">70 000 pts · 7 dgr · Israel</div>
   </div>
   <div class="legs">
     
     <div class="leg">
       <div class="lbl">Ut</div>
-      <div class="when">2027-02-11 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T17:58:52.159542Z"></span>
+      <div class="when">2026-09-23 · CPH → TLV</div>
+      <div class="meta">9 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:55.988283Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 12t 25m
-        (10t 00m fly,
-         2t 25m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">07:10–08:20</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK844 · Airbus A320neo · 1t10m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover ">
-            ↳ ARN · 2t 25m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-02-19 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:21.697032Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 30m
+        (4t 30m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-11&adt=2&chd=0&inf=0&retDate=2027-02-19" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-11|2027-02-19|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-11|2027-02-19|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-11|2027-02-19|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-11|2027-02-19|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-11|2027-02-19|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-15|2027-02-21|business"
-     data-dest="New York"
-     data-origin="OSL"
-     data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-15"
-     data-retdate="2027-02-21">
-  <div class="head">
-    <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-      <span class="pill business">Business</span>
-      
-      <span class="pill risk-medium">stale 17.9t</span>
-      
-    </div>
-    <div class="pts">120 000 pts · 6 dgr · New York</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-02-15 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T03:37:23.287152Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 15t 45m
-        (10t 05m fly,
-         5t 40m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">05:55–07:15</span>
-          <span class="route">OSL→CPH</span>
-          <span class="meta">SK1461 · Airbus A320neo · 1t20m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover long">
-            ↳ CPH · 5t 40m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">12:55–15:40</span>
-          <span class="route">CPH→EWR</span>
-          <span class="meta">SK909 · Airbus A330-300 · 8t45m · business</span>
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · business</span>
         </div>
         
         
@@ -1594,23 +996,23 @@
     
     <div class="leg">
       <div class="lbl">Hjem</div>
-      <div class="when">2027-02-21 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:23.332267Z"></span>
+      <div class="when">2026-09-30 · TLV → CPH</div>
+      <div class="meta">6 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.366768Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 45m
+        (4t 45m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · business</span>
         </div>
         
         
@@ -1619,200 +1021,72 @@
     </div>
     
   </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-15&adt=2&chd=0&inf=0&retDate=2027-02-21" target="_blank">
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-23&adt=2&chd=0&inf=0&retDate=2026-09-30" target="_blank">
     Book fly på SAS →
   </a>
   <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
   </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-15|2027-02-21|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-15|2027-02-21|business', this)">Ikke aktuell</button>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-23|2026-09-30|business', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-23|2026-09-30|business', this)">Ikke aktuell</button>
   <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
     ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
   </span>
 
   <div class="feedback">
     <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-15|2027-02-21|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-15|2027-02-21|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-23|2026-09-30|business','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-23|2026-09-30|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
     </span>
     <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-15|2027-02-21|business', this)"></textarea>
+              onblur="saveComment('Israel|CPHTLV|2026-09-23|2026-09-30|business', this)"></textarea>
     <span class="saved"></span>
   </div>
 
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
+  
 </div>
 
 
 
 <div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-15|2027-02-24|business"
-     data-dest="New York"
-     data-origin="OSL"
+     data-trip-id="Israel|CPHTLV|2026-09-23|2026-10-01|business"
+     data-dest="Israel"
+     data-origin="CPH"
      data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-15"
-     data-retdate="2027-02-24">
+     data-direct="1"
+     data-outdate="2026-09-23"
+     data-retdate="2026-10-01">
   <div class="head">
     <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
       <span class="pill business">Business</span>
+      <span class="pill direct">Begge direkte</span>
       
-      <span class="pill risk-medium">stale 17.9t</span>
       
     </div>
-    <div class="pts">120 000 pts · 9 dgr · New York</div>
+    <div class="pts">70 000 pts · 8 dgr · Israel</div>
   </div>
   <div class="legs">
     
     <div class="leg">
       <div class="lbl">Ut</div>
-      <div class="when">2027-02-15 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T03:37:23.287152Z"></span>
+      <div class="when">2026-09-23 · CPH → TLV</div>
+      <div class="meta">9 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:55.988283Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 15t 45m
-        (10t 05m fly,
-         5t 40m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">05:55–07:15</span>
-          <span class="route">OSL→CPH</span>
-          <span class="meta">SK1461 · Airbus A320neo · 1t20m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover long">
-            ↳ CPH · 5t 40m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">12:55–15:40</span>
-          <span class="route">CPH→EWR</span>
-          <span class="meta">SK909 · Airbus A330-300 · 8t45m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-02-24 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:19.772677Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 30m
+        (4t 30m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-15&adt=2&chd=0&inf=0&retDate=2027-02-24" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-15|2027-02-24|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-15|2027-02-24|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-15|2027-02-24|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-15|2027-02-24|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-15|2027-02-24|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-16|2027-02-24|business"
-     data-dest="New York"
-     data-origin="OSL"
-     data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-16"
-     data-retdate="2027-02-24">
-  <div class="head">
-    <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-      <span class="pill business">Business</span>
-      
-      <span class="pill risk-medium">stale 22.6t</span>
-      
-    </div>
-    <div class="pts">120 000 pts · 8 dgr · New York</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-02-16 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-25T22:51:34.919134Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 22t 05m
-        (9t 55m fly,
-         12t 10m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">21:30–22:35</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK1488 · Airbus A320neo · 1t05m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover long">
-            ↳ ARN · 12t 10m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · business</span>
         </div>
         
         
@@ -1822,23 +1096,23 @@
     
     <div class="leg">
       <div class="lbl">Hjem</div>
-      <div class="when">2027-02-24 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:19.772677Z"></span>
+      <div class="when">2026-10-01 · TLV → CPH</div>
+      <div class="meta">6 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.795769Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 45m
+        (4t 45m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · business</span>
         </div>
         
         
@@ -1847,200 +1121,72 @@
     </div>
     
   </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-16&adt=2&chd=0&inf=0&retDate=2027-02-24" target="_blank">
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-23&adt=2&chd=0&inf=0&retDate=2026-10-01" target="_blank">
     Book fly på SAS →
   </a>
   <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
   </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-16|2027-02-24|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-16|2027-02-24|business', this)">Ikke aktuell</button>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-23|2026-10-01|business', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-23|2026-10-01|business', this)">Ikke aktuell</button>
   <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
     ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
   </span>
 
   <div class="feedback">
     <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-16|2027-02-24|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-16|2027-02-24|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-23|2026-10-01|business','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-23|2026-10-01|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
     </span>
     <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-16|2027-02-24|business', this)"></textarea>
+              onblur="saveComment('Israel|CPHTLV|2026-09-23|2026-10-01|business', this)"></textarea>
     <span class="saved"></span>
   </div>
 
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
+  
 </div>
 
 
 
 <div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-17|2027-02-24|business"
-     data-dest="New York"
-     data-origin="OSL"
+     data-trip-id="Israel|CPHTLV|2026-09-22|2026-09-30|business"
+     data-dest="Israel"
+     data-origin="CPH"
      data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-17"
-     data-retdate="2027-02-24">
+     data-direct="1"
+     data-outdate="2026-09-22"
+     data-retdate="2026-09-30">
   <div class="head">
     <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
       <span class="pill business">Business</span>
+      <span class="pill direct">Begge direkte</span>
       
-      <span class="pill risk-medium">stale 17.9t</span>
       
     </div>
-    <div class="pts">120 000 pts · 7 dgr · New York</div>
+    <div class="pts">196 489 pts · 8 dgr · Israel</div>
   </div>
   <div class="legs">
     
     <div class="leg">
       <div class="lbl">Ut</div>
-      <div class="when">2027-02-17 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T03:37:24.172084Z"></span>
+      <div class="when">2026-09-22 · CPH → TLV</div>
+      <div class="meta">9 seter · 161 489 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:55.901381Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 12t 25m
-        (10t 00m fly,
-         2t 25m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">07:10–08:20</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK844 · Airbus A319 · 1t10m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover ">
-            ↳ ARN · 2t 25m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-02-24 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:19.772677Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 30m
+        (4t 30m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-17&adt=2&chd=0&inf=0&retDate=2027-02-24" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-17|2027-02-24|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-17|2027-02-24|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-17|2027-02-24|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-17|2027-02-24|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-17|2027-02-24|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="New York|OSLEWR|2027-02-18|2027-02-24|business"
-     data-dest="New York"
-     data-origin="OSL"
-     data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-02-18"
-     data-retdate="2027-02-24">
-  <div class="head">
-    <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
-      <span class="pill business">Business</span>
-      
-      <span class="pill risk-medium">stale 17.9t</span>
-      
-    </div>
-    <div class="pts">120 000 pts · 6 dgr · New York</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-02-18 · OSL → EWR</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T03:37:23.464318Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 10t 55m
-        (9t 55m fly,
-         1t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">08:40–09:45</span>
-          <span class="route">OSL→ARN</span>
-          <span class="meta">SK480 · Airbus A320neo · 1t05m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover short">
-            ↳ ARN · 1t 00m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">10:45–13:35</span>
-          <span class="route">ARN→EWR</span>
-          <span class="meta">SK903 · Airbus A330-300 · 8t50m · business</span>
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · business</span>
         </div>
         
         
@@ -2050,23 +1196,23 @@
     
     <div class="leg">
       <div class="lbl">Hjem</div>
-      <div class="when">2027-02-24 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:19.772677Z"></span>
+      <div class="when">2026-09-30 · TLV → CPH</div>
+      <div class="meta">6 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.366768Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 7t 35m
-        (7t 35m fly,
+        Total 4t 45m
+        (4t 45m fly,
          0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">18:30–08:05</span>
-          <span class="route">EWR→OSL</span>
-          <span class="meta">SK908 · Airbus A321neo · 7t35m · business</span>
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · business</span>
         </div>
         
         
@@ -2075,86 +1221,72 @@
     </div>
     
   </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-02-18&adt=2&chd=0&inf=0&retDate=2027-02-24" target="_blank">
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-22&adt=2&chd=0&inf=0&retDate=2026-09-30" target="_blank">
     Book fly på SAS →
   </a>
   <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
   </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-02-18|2027-02-24|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-02-18|2027-02-24|business', this)">Ikke aktuell</button>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-22|2026-09-30|business', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-22|2026-09-30|business', this)">Ikke aktuell</button>
   <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
     ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
   </span>
 
   <div class="feedback">
     <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-02-18|2027-02-24|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-02-18|2027-02-24|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-22|2026-09-30|business','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-22|2026-09-30|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
     </span>
     <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-02-18|2027-02-24|business', this)"></textarea>
+              onblur="saveComment('Israel|CPHTLV|2026-09-22|2026-09-30|business', this)"></textarea>
     <span class="saved"></span>
   </div>
 
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting</div>
+  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Over budsjett (196,489 pts > 160,000)</div>
 </div>
 
 
 
 <div class="trip"
-     data-trip-id="New York|OSLEWR|2027-01-23|2027-02-01|business"
-     data-dest="New York"
-     data-origin="OSL"
+     data-trip-id="Israel|CPHTLV|2026-09-22|2026-10-01|business"
+     data-dest="Israel"
+     data-origin="CPH"
      data-cabin="business"
-     data-direct="0"
-     data-outdate="2027-01-23"
-     data-retdate="2027-02-01">
+     data-direct="1"
+     data-outdate="2026-09-22"
+     data-retdate="2026-10-01">
   <div class="head">
     <div class="route">
-      OSL<span class="arrow">→</span>EWR<span class="arrow">→</span>OSL
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
       <span class="pill business">Business</span>
+      <span class="pill direct">Begge direkte</span>
       
-      <span class="pill risk-medium">stale 17.9t</span>
       
     </div>
-    <div class="pts">120 000 pts · 9 dgr · New York</div>
+    <div class="pts">196 489 pts · 9 dgr · Israel</div>
   </div>
   <div class="legs">
     
     <div class="leg">
       <div class="lbl">Ut</div>
-      <div class="when">2027-01-23 · OSL → EWR</div>
-      <div class="meta">1 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T03:37:29.501316Z"></span>
+      <div class="when">2026-09-22 · CPH → TLV</div>
+      <div class="meta">9 seter · 161 489 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:55.901381Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 15t 45m
-        (10t 05m fly,
-         5t 40m vente)
+        Total 4t 30m
+        (4t 30m fly,
+         0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">05:55–07:15</span>
-          <span class="route">OSL→CPH</span>
-          <span class="meta">SK1461 · Airbus A320neo · 1t20m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover long">
-            ↳ CPH · 5t 40m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">12:55–15:40</span>
-          <span class="route">CPH→EWR</span>
-          <span class="meta">SK909 · Airbus A330-300 · 8t45m · business</span>
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · business</span>
         </div>
         
         
@@ -2164,37 +1296,23 @@
     
     <div class="leg">
       <div class="lbl">Hjem</div>
-      <div class="when">2027-02-01 · EWR → OSL</div>
-      <div class="meta">2 seter · 60 000 pts · 1+ stops · SK
-        <span class="freshness" data-iso="2026-04-26T03:31:34.089895Z"></span>
+      <div class="when">2026-10-01 · TLV → CPH</div>
+      <div class="meta">6 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.795769Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 10t 20m
-        (8t 50m fly,
-         1t 30m vente)
+        Total 4t 45m
+        (4t 45m fly,
+         0t 00m vente)
         
       </div>
       <div class="segments">
         
         <div class="seg business">
-          <span class="time">17:40–07:30</span>
-          <span class="route">EWR→ARN</span>
-          <span class="meta">SK904 · Airbus A330-300 · 7t50m · business</span>
-        </div>
-        
-          
-          
-          <div class="layover ">
-            ↳ ARN · 1t 30m vente
-          </div>
-          
-        
-        
-        <div class="seg business">
-          <span class="time">09:00–10:00</span>
-          <span class="route">ARN→OSL</span>
-          <span class="meta">SK847 · Airbus A320neo · 1t00m · business</span>
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · business</span>
         </div>
         
         
@@ -2203,29 +1321,729 @@
     </div>
     
   </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=EWR&outDate=2027-01-23&adt=2&chd=0&inf=0&retDate=2027-02-01" target="_blank">
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-22&adt=2&chd=0&inf=0&retDate=2026-10-01" target="_blank">
     Book fly på SAS →
   </a>
   <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=OSL.&destination=EWR.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
   </span>
-  <button class="book-btn" onclick="toggleBook('New York|OSLEWR|2027-01-23|2027-02-01|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('New York|OSLEWR|2027-01-23|2027-02-01|business', this)">Ikke aktuell</button>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-22|2026-10-01|business', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-22|2026-10-01|business', this)">Ikke aktuell</button>
   <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
     ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
   </span>
 
   <div class="feedback">
     <span class="rate">
-      <button data-value="up" onclick="rate('New York|OSLEWR|2027-01-23|2027-02-01|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('New York|OSLEWR|2027-01-23|2027-02-01|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-22|2026-10-01|business','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-22|2026-10-01|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
     </span>
     <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('New York|OSLEWR|2027-01-23|2027-02-01|business', this)"></textarea>
+              onblur="saveComment('Israel|CPHTLV|2026-09-22|2026-10-01|business', this)"></textarea>
     <span class="saved"></span>
   </div>
 
-  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Out: connecting · Ret: connecting</div>
+  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Over budsjett (196,489 pts > 160,000)</div>
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Israel|CPHTLV|2026-09-24|2026-09-30|business"
+     data-dest="Israel"
+     data-origin="CPH"
+     data-cabin="business"
+     data-direct="1"
+     data-outdate="2026-09-24"
+     data-retdate="2026-09-30">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
+      <span class="pill business">Business</span>
+      <span class="pill direct">Begge direkte</span>
+      
+      
+    </div>
+    <div class="pts">196 489 pts · 6 dgr · Israel</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-09-24 · CPH → TLV</div>
+      <div class="meta">9 seter · 161 489 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:56.038039Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 30m
+        (4t 30m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg business">
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · business</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-09-30 · TLV → CPH</div>
+      <div class="meta">6 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.366768Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 45m
+        (4t 45m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg business">
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · business</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-24&adt=2&chd=0&inf=0&retDate=2026-09-30" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-24|2026-09-30|business', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-24|2026-09-30|business', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-24|2026-09-30|business','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-24|2026-09-30|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Israel|CPHTLV|2026-09-24|2026-09-30|business', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Over budsjett (196,489 pts > 160,000)</div>
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Israel|CPHTLV|2026-09-24|2026-10-01|business"
+     data-dest="Israel"
+     data-origin="CPH"
+     data-cabin="business"
+     data-direct="1"
+     data-outdate="2026-09-24"
+     data-retdate="2026-10-01">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
+      <span class="pill business">Business</span>
+      <span class="pill direct">Begge direkte</span>
+      
+      
+    </div>
+    <div class="pts">196 489 pts · 7 dgr · Israel</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-09-24 · CPH → TLV</div>
+      <div class="meta">9 seter · 161 489 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:56.038039Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 30m
+        (4t 30m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg business">
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · business</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-10-01 · TLV → CPH</div>
+      <div class="meta">6 seter · 35 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.795769Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 45m
+        (4t 45m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg business">
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · business</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-24&adt=2&chd=0&inf=0&retDate=2026-10-01" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-24|2026-10-01|business', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-24|2026-10-01|business', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-24|2026-10-01|business','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-24|2026-10-01|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Israel|CPHTLV|2026-09-24|2026-10-01|business', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  <div style="font-size:12px;color:var(--muted);margin-top:6px;">Over budsjett (196,489 pts > 160,000)</div>
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Israel|CPHTLV|2026-09-20|2026-09-30|economy"
+     data-dest="Israel"
+     data-origin="CPH"
+     data-cabin="economy"
+     data-direct="1"
+     data-outdate="2026-09-20"
+     data-retdate="2026-09-30">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
+      <span class="pill economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      
+      
+    </div>
+    <div class="pts">30 000 pts · 10 dgr · Israel</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-09-20 · CPH → TLV</div>
+      <div class="meta">9 seter · 15 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:56.074353Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 30m
+        (4t 30m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">06:05–11:35</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-09-30 · TLV → CPH</div>
+      <div class="meta">6 seter · 15 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.366768Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 45m
+        (4t 45m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-20&adt=2&chd=0&inf=0&retDate=2026-09-30" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-20|2026-09-30|economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-20|2026-09-30|economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-20|2026-09-30|economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-20|2026-09-30|economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Israel|CPHTLV|2026-09-20|2026-09-30|economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Israel|CPHTLV|2026-09-20|2026-10-01|economy"
+     data-dest="Israel"
+     data-origin="CPH"
+     data-cabin="economy"
+     data-direct="1"
+     data-outdate="2026-09-20"
+     data-retdate="2026-10-01">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
+      <span class="pill economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      
+      
+    </div>
+    <div class="pts">30 000 pts · 11 dgr · Israel</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-09-20 · CPH → TLV</div>
+      <div class="meta">9 seter · 15 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:56.074353Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 30m
+        (4t 30m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">06:05–11:35</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-10-01 · TLV → CPH</div>
+      <div class="meta">6 seter · 15 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.795769Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 45m
+        (4t 45m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-20&adt=2&chd=0&inf=0&retDate=2026-10-01" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-20|2026-10-01|economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-20|2026-10-01|economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-20|2026-10-01|economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-20|2026-10-01|economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Israel|CPHTLV|2026-09-20|2026-10-01|economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Israel|CPHTLV|2026-09-21|2026-09-30|economy"
+     data-dest="Israel"
+     data-origin="CPH"
+     data-cabin="economy"
+     data-direct="1"
+     data-outdate="2026-09-21"
+     data-retdate="2026-09-30">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
+      <span class="pill economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      
+      
+    </div>
+    <div class="pts">30 000 pts · 9 dgr · Israel</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-09-21 · CPH → TLV</div>
+      <div class="meta">9 seter · 15 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:56.279812Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 30m
+        (4t 30m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-09-30 · TLV → CPH</div>
+      <div class="meta">6 seter · 15 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.366768Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 45m
+        (4t 45m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-21&adt=2&chd=0&inf=0&retDate=2026-09-30" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-21|2026-09-30|economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-21|2026-09-30|economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-21|2026-09-30|economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-21|2026-09-30|economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Israel|CPHTLV|2026-09-21|2026-09-30|economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Israel|CPHTLV|2026-09-21|2026-10-01|economy"
+     data-dest="Israel"
+     data-origin="CPH"
+     data-cabin="economy"
+     data-direct="1"
+     data-outdate="2026-09-21"
+     data-retdate="2026-10-01">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
+      <span class="pill economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      
+      
+    </div>
+    <div class="pts">30 000 pts · 10 dgr · Israel</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-09-21 · CPH → TLV</div>
+      <div class="meta">9 seter · 15 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:56.279812Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 30m
+        (4t 30m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-10-01 · TLV → CPH</div>
+      <div class="meta">6 seter · 15 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.795769Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 45m
+        (4t 45m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-21&adt=2&chd=0&inf=0&retDate=2026-10-01" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-21|2026-10-01|economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-21|2026-10-01|economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-21|2026-10-01|economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-21|2026-10-01|economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Israel|CPHTLV|2026-09-21|2026-10-01|economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Israel|CPHTLV|2026-09-23|2026-09-30|economy"
+     data-dest="Israel"
+     data-origin="CPH"
+     data-cabin="economy"
+     data-direct="1"
+     data-outdate="2026-09-23"
+     data-retdate="2026-09-30">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>TLV<span class="arrow">→</span>CPH
+      <span class="pill economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      
+      
+    </div>
+    <div class="pts">30 000 pts · 7 dgr · Israel</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-09-23 · CPH → TLV</div>
+      <div class="meta">9 seter · 15 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T22:50:55.988283Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 30m
+        (4t 30m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">17:25–22:55</span>
+          <span class="route">CPH→TLV</span>
+          <span class="meta">SK771 · Airbus A320neo · 4t30m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-09-30 · TLV → CPH</div>
+      <div class="meta">6 seter · 15 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-04-26T23:07:02.366768Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 4t 45m
+        (4t 45m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">23:55–03:40</span>
+          <span class="route">TLV→CPH</span>
+          <span class="meta">SK772 · Airbus A320neo · 4t45m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2026-09-23&adt=2&chd=0&inf=0&retDate=2026-09-30" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Israel|CPHTLV|2026-09-23|2026-09-30|economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Israel|CPHTLV|2026-09-23|2026-09-30|economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Israel|CPHTLV|2026-09-23|2026-09-30|economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Israel|CPHTLV|2026-09-23|2026-09-30|economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Israel|CPHTLV|2026-09-23|2026-09-30|economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
 </div>
 
 
@@ -2236,7 +2054,7 @@
   
   <div class="destcard">
     <h4>New York
-      <span class="count has">54 par</span>
+      <span class="count has">65 par</span>
     </h4>
     <div class="sub">
       Fly: JFK, EWR ·
@@ -2244,19 +2062,253 @@
       6-9 dgr
       
     </div>
-    <div class="sub" style="font-style:italic;">Klassisk weekend / 1-uke familietur. JFK > EWR pga lokasjon.</div>
+    <div class="sub" style="font-style:italic;">Klassisk weekend / 1-uke. JFK > EWR. Feb 2027 BOOKET.</div>
     
       
       <div style="margin-top:8px;font-size:13px;">
-        Best: <strong>2027-02-06 → 2027-02-15</strong>
-        (9 dgr, 120 000 pts, OSL)
+        Best: <strong>2027-01-23 → 2027-02-01</strong>
+        (9 dgr, 120 000 pts, CPH)
       </div>
       
       <details>
-        <summary>Vis alle 54 par</summary>
+        <summary>Vis alle 65 par</summary>
         <table style="margin-top:6px;">
           <thead><tr><th>Ut</th><th>Hjem</th><th>Dgr</th><th>Fra</th><th>Klasse</th><th>Pts</th></tr></thead>
           <tbody>
+          
+            <tr>
+              <td>2027-01-23</td>
+              <td>2027-02-01</td>
+              <td>9</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-10</td>
+              <td>2027-02-18</td>
+              <td>8</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-11</td>
+              <td>2027-02-18</td>
+              <td>7</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-18</td>
+              <td>2027-02-26</td>
+              <td>8</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-18</td>
+              <td>2027-02-27</td>
+              <td>9</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-20</td>
+              <td>2027-02-26</td>
+              <td>6</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-20</td>
+              <td>2027-02-27</td>
+              <td>7</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-13</td>
+              <td>2026-08-19</td>
+              <td>6</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-13</td>
+              <td>2026-08-21</td>
+              <td>8</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-13</td>
+              <td>2026-08-22</td>
+              <td>9</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-21</td>
+              <td>2026-08-29</td>
+              <td>8</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-01-26</td>
+              <td>2027-02-01</td>
+              <td>6</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-01-27</td>
+              <td>2027-02-05</td>
+              <td>9</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-06</td>
+              <td>2027-02-15</td>
+              <td>9</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-10</td>
+              <td>2027-02-17</td>
+              <td>7</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-10</td>
+              <td>2027-02-19</td>
+              <td>9</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-11</td>
+              <td>2027-02-17</td>
+              <td>6</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-02-11</td>
+              <td>2027-02-19</td>
+              <td>8</td>
+              <td>CPH→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-12</td>
+              <td>2026-08-19</td>
+              <td>7</td>
+              <td>ARN→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-12</td>
+              <td>2026-08-21</td>
+              <td>9</td>
+              <td>ARN→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-13</td>
+              <td>2026-08-19</td>
+              <td>6</td>
+              <td>ARN→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-13</td>
+              <td>2026-08-21</td>
+              <td>8</td>
+              <td>ARN→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-13</td>
+              <td>2026-08-22</td>
+              <td>9</td>
+              <td>ARN→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-13</td>
+              <td>2026-08-19</td>
+              <td>6</td>
+              <td>OSL→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-13</td>
+              <td>2026-08-21</td>
+              <td>8</td>
+              <td>OSL→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-13</td>
+              <td>2026-08-22</td>
+              <td>9</td>
+              <td>OSL→EWR</td>
+              <td>J</td>
+              <td>120 000</td>
+            </tr>
           
             <tr>
               <td>2027-02-06</td>
@@ -2289,240 +2341,6 @@
               <td>2027-02-10</td>
               <td>2027-02-17</td>
               <td>7</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-10</td>
-              <td>2027-02-18</td>
-              <td>8</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-10</td>
-              <td>2027-02-19</td>
-              <td>9</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-11</td>
-              <td>2027-02-17</td>
-              <td>6</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-11</td>
-              <td>2027-02-18</td>
-              <td>7</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-11</td>
-              <td>2027-02-19</td>
-              <td>8</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-15</td>
-              <td>2027-02-21</td>
-              <td>6</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-15</td>
-              <td>2027-02-24</td>
-              <td>9</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-16</td>
-              <td>2027-02-24</td>
-              <td>8</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-17</td>
-              <td>2027-02-24</td>
-              <td>7</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-18</td>
-              <td>2027-02-24</td>
-              <td>6</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-23</td>
-              <td>2027-02-01</td>
-              <td>9</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-26</td>
-              <td>2027-02-01</td>
-              <td>6</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-27</td>
-              <td>2027-02-05</td>
-              <td>9</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-09</td>
-              <td>2027-02-15</td>
-              <td>6</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2026-08-13</td>
-              <td>2026-08-19</td>
-              <td>6</td>
-              <td>CPH→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2026-08-13</td>
-              <td>2026-08-21</td>
-              <td>8</td>
-              <td>CPH→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2026-08-13</td>
-              <td>2026-08-22</td>
-              <td>9</td>
-              <td>CPH→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2026-08-16</td>
-              <td>2026-08-22</td>
-              <td>6</td>
-              <td>ARN→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-11</td>
-              <td>2027-02-20</td>
-              <td>9</td>
-              <td>ARN→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-14</td>
-              <td>2027-02-20</td>
-              <td>6</td>
-              <td>ARN→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-11</td>
-              <td>2027-02-17</td>
-              <td>6</td>
-              <td>ARN→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-11</td>
-              <td>2027-02-18</td>
-              <td>7</td>
-              <td>ARN→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2026-08-13</td>
-              <td>2026-08-19</td>
-              <td>6</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2026-08-13</td>
-              <td>2026-08-21</td>
-              <td>8</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2026-08-13</td>
-              <td>2026-08-22</td>
-              <td>9</td>
-              <td>OSL→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2026-08-16</td>
-              <td>2026-08-22</td>
-              <td>6</td>
               <td>OSL→EWR</td>
               <td>J</td>
               <td>120 000</td>
@@ -2537,303 +2355,57 @@
 
   
   <div class="destcard">
-    <h4>Boston
-      <span class="count has">34 par</span>
+    <h4>Washington DC
+      <span class="count has">1 par</span>
     </h4>
     <div class="sub">
-      Fly: BOS ·
+      Fly: IAD ·
       Fra: OSL / CPH / ARN / GOT ·
       6-9 dgr
       
     </div>
-    
+    <div class="sub" style="font-style:italic;">23 datoer J 2+ for 60k pts ute. Retur Y mest tilgjengelig.</div>
     
       
       <div style="margin-top:8px;font-size:13px;">
-        Best: <strong>2027-01-27 → 2027-02-02</strong>
-        (6 dgr, 120 000 pts, CPH)
+        Best: <strong>2027-01-28 → 2027-02-06</strong>
+        (9 dgr, 120 000 pts, CPH)
       </div>
       
-      <details>
-        <summary>Vis alle 34 par</summary>
-        <table style="margin-top:6px;">
-          <thead><tr><th>Ut</th><th>Hjem</th><th>Dgr</th><th>Fra</th><th>Klasse</th><th>Pts</th></tr></thead>
-          <tbody>
-          
-            <tr>
-              <td>2027-01-27</td>
-              <td>2027-02-02</td>
-              <td>6</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-27</td>
-              <td>2027-02-03</td>
-              <td>7</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-27</td>
-              <td>2027-02-04</td>
-              <td>8</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-29</td>
-              <td>2027-02-04</td>
-              <td>6</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-31</td>
-              <td>2027-02-09</td>
-              <td>9</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-02</td>
-              <td>2027-02-09</td>
-              <td>7</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-02</td>
-              <td>2027-02-10</td>
-              <td>8</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-03</td>
-              <td>2027-02-09</td>
-              <td>6</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-03</td>
-              <td>2027-02-10</td>
-              <td>7</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-03</td>
-              <td>2027-02-12</td>
-              <td>9</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-04</td>
-              <td>2027-02-10</td>
-              <td>6</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-04</td>
-              <td>2027-02-12</td>
-              <td>8</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-06</td>
-              <td>2027-02-12</td>
-              <td>6</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-10</td>
-              <td>2027-02-19</td>
-              <td>9</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-11</td>
-              <td>2027-02-19</td>
-              <td>8</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-21</td>
-              <td>2027-02-27</td>
-              <td>6</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-21</td>
-              <td>2027-03-02</td>
-              <td>9</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-23</td>
-              <td>2027-03-02</td>
-              <td>7</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-23</td>
-              <td>2027-03-03</td>
-              <td>8</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-23</td>
-              <td>2027-03-04</td>
-              <td>9</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-24</td>
-              <td>2027-03-02</td>
-              <td>6</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-24</td>
-              <td>2027-03-03</td>
-              <td>7</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-24</td>
-              <td>2027-03-04</td>
-              <td>8</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-24</td>
-              <td>2027-03-05</td>
-              <td>9</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-25</td>
-              <td>2027-03-03</td>
-              <td>6</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-25</td>
-              <td>2027-03-04</td>
-              <td>7</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-25</td>
-              <td>2027-03-05</td>
-              <td>8</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-26</td>
-              <td>2027-03-04</td>
-              <td>6</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-26</td>
-              <td>2027-03-05</td>
-              <td>7</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-03-02</td>
-              <td>2027-03-10</td>
-              <td>8</td>
-              <td>CPH→BOS</td>
-              <td>J</td>
-              <td>120 000</td>
-            </tr>
-          
-          </tbody>
-        </table>
-      </details>
+    
+  </div>
+
+  
+  <div class="destcard">
+    <h4>Toronto
+      <span class="count ">0 par</span>
+    </h4>
+    <div class="sub">
+      Fly: YYZ ·
+      Fra: OSL / CPH / ARN / GOT ·
+      6-9 dgr
       
+    </div>
+    <div class="sub" style="font-style:italic;">Canada. 29 datoer J 2+ for 60k pts. Retur kun Y.</div>
+    
+      <div class="sub" style="margin-top:8px;">Ingen par funnet.</div>
+    
+  </div>
+
+  
+  <div class="destcard">
+    <h4>Seattle
+      <span class="count ">0 par</span>
+    </h4>
+    <div class="sub">
+      Fly: SEA ·
+      Fra: OSL / CPH / ARN / GOT ·
+      6-12 dgr
+      
+    </div>
+    <div class="sub" style="font-style:italic;">Pacific NW + nær Canada/British Columbia.</div>
+    
+      <div class="sub" style="margin-top:8px;">Ingen par funnet.</div>
     
   </div>
 
@@ -2849,6 +2421,661 @@
       
     </div>
     <div class="sub" style="font-style:italic;">Lite tilgjengelighet (verifisert). Hold øye uansett.</div>
+    
+      <div class="sub" style="margin-top:8px;">Ingen par funnet.</div>
+    
+  </div>
+
+  
+  <div class="destcard">
+    <h4>Israel
+      <span class="count has">3204 par</span>
+    </h4>
+    <div class="sub">
+      Fly: TLV ·
+      Fra: OSL / CPH / ARN / GOT ·
+      5-14 dgr
+      
+    </div>
+    <div class="sub" style="font-style:italic;">🔥 EKSTREM BANG: 200+ datoer J 2+ for 35k pts/vei. Halv pris av USA.</div>
+    
+      
+      <div style="margin-top:8px;font-size:13px;">
+        Best: <strong>2026-09-20 → 2026-09-30</strong>
+        (10 dgr, 70 000 pts, CPH)
+      </div>
+      
+      <details>
+        <summary>Vis alle 3204 par</summary>
+        <table style="margin-top:6px;">
+          <thead><tr><th>Ut</th><th>Hjem</th><th>Dgr</th><th>Fra</th><th>Klasse</th><th>Pts</th></tr></thead>
+          <tbody>
+          
+            <tr>
+              <td>2026-09-20</td>
+              <td>2026-09-30</td>
+              <td>10</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-20</td>
+              <td>2026-10-01</td>
+              <td>11</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-21</td>
+              <td>2026-09-30</td>
+              <td>9</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-21</td>
+              <td>2026-10-01</td>
+              <td>10</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-23</td>
+              <td>2026-09-30</td>
+              <td>7</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-23</td>
+              <td>2026-10-01</td>
+              <td>8</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-22</td>
+              <td>2026-09-30</td>
+              <td>8</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>196 489</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-22</td>
+              <td>2026-10-01</td>
+              <td>9</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>196 489</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-24</td>
+              <td>2026-09-30</td>
+              <td>6</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>196 489</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-24</td>
+              <td>2026-10-01</td>
+              <td>7</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>196 489</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-20</td>
+              <td>2026-09-30</td>
+              <td>10</td>
+              <td>CPH→TLV</td>
+              <td>W</td>
+              <td>30 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-20</td>
+              <td>2026-10-01</td>
+              <td>11</td>
+              <td>CPH→TLV</td>
+              <td>W</td>
+              <td>30 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-21</td>
+              <td>2026-09-30</td>
+              <td>9</td>
+              <td>CPH→TLV</td>
+              <td>W</td>
+              <td>30 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-21</td>
+              <td>2026-10-01</td>
+              <td>10</td>
+              <td>CPH→TLV</td>
+              <td>W</td>
+              <td>30 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-23</td>
+              <td>2026-09-30</td>
+              <td>7</td>
+              <td>CPH→TLV</td>
+              <td>W</td>
+              <td>30 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-23</td>
+              <td>2026-10-01</td>
+              <td>8</td>
+              <td>CPH→TLV</td>
+              <td>W</td>
+              <td>30 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-22</td>
+              <td>2026-09-30</td>
+              <td>8</td>
+              <td>CPH→TLV</td>
+              <td>W</td>
+              <td>138 777</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-22</td>
+              <td>2026-10-01</td>
+              <td>9</td>
+              <td>CPH→TLV</td>
+              <td>W</td>
+              <td>138 777</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-24</td>
+              <td>2026-09-30</td>
+              <td>6</td>
+              <td>CPH→TLV</td>
+              <td>W</td>
+              <td>138 777</td>
+            </tr>
+          
+            <tr>
+              <td>2026-09-24</td>
+              <td>2026-10-01</td>
+              <td>7</td>
+              <td>CPH→TLV</td>
+              <td>W</td>
+              <td>138 777</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-23</td>
+              <td>2026-06-30</td>
+              <td>7</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-23</td>
+              <td>2026-07-02</td>
+              <td>9</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-23</td>
+              <td>2026-07-03</td>
+              <td>10</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-23</td>
+              <td>2026-07-07</td>
+              <td>14</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-07-30</td>
+              <td>2026-08-11</td>
+              <td>12</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-07-31</td>
+              <td>2026-08-11</td>
+              <td>11</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-04</td>
+              <td>2026-08-11</td>
+              <td>7</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-06</td>
+              <td>2026-08-11</td>
+              <td>5</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-16</td>
+              <td>2026-08-23</td>
+              <td>7</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-08-16</td>
+              <td>2026-08-25</td>
+              <td>9</td>
+              <td>CPH→TLV</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </details>
+      
+    
+  </div>
+
+  
+  <div class="destcard">
+    <h4>Dubai
+      <span class="count ">0 par</span>
+    </h4>
+    <div class="sub">
+      Fly: DXB ·
+      Fra: OSL / CPH / ARN / GOT ·
+      5-14 dgr
+      
+    </div>
+    <div class="sub" style="font-style:italic;">Ny rute fra okt 2026 (vinter). Daglig CPH-DXB.</div>
+    
+      <div class="sub" style="margin-top:8px;">Ingen par funnet.</div>
+    
+  </div>
+
+  
+  <div class="destcard">
+    <h4>Mumbai
+      <span class="count has">551 par</span>
+    </h4>
+    <div class="sub">
+      Fly: BOM ·
+      Fra: OSL / CPH / ARN / GOT ·
+      9-19 dgr
+      
+    </div>
+    <div class="sub" style="font-style:italic;">Ny SAS-rute fra juni 2026. 31 datoer J 2+ for 60k pts ute.</div>
+    
+      
+      <div style="margin-top:8px;font-size:13px;">
+        Best: <strong>2026-06-02 → 2026-06-12</strong>
+        (10 dgr, 60 000 pts, CPH)
+      </div>
+      
+      <details>
+        <summary>Vis alle 551 par</summary>
+        <table style="margin-top:6px;">
+          <thead><tr><th>Ut</th><th>Hjem</th><th>Dgr</th><th>Fra</th><th>Klasse</th><th>Pts</th></tr></thead>
+          <tbody>
+          
+            <tr>
+              <td>2026-06-02</td>
+              <td>2026-06-12</td>
+              <td>10</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-02</td>
+              <td>2026-06-13</td>
+              <td>11</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-02</td>
+              <td>2026-06-14</td>
+              <td>12</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-02</td>
+              <td>2026-06-15</td>
+              <td>13</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-02</td>
+              <td>2026-06-17</td>
+              <td>15</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-02</td>
+              <td>2026-06-19</td>
+              <td>17</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-02</td>
+              <td>2026-06-20</td>
+              <td>18</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-02</td>
+              <td>2026-06-21</td>
+              <td>19</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-04</td>
+              <td>2026-06-13</td>
+              <td>9</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-04</td>
+              <td>2026-06-14</td>
+              <td>10</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-04</td>
+              <td>2026-06-15</td>
+              <td>11</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-04</td>
+              <td>2026-06-17</td>
+              <td>13</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-04</td>
+              <td>2026-06-19</td>
+              <td>15</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-04</td>
+              <td>2026-06-20</td>
+              <td>16</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-04</td>
+              <td>2026-06-21</td>
+              <td>17</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-04</td>
+              <td>2026-06-22</td>
+              <td>18</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-05</td>
+              <td>2026-06-14</td>
+              <td>9</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-05</td>
+              <td>2026-06-15</td>
+              <td>10</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-05</td>
+              <td>2026-06-17</td>
+              <td>12</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-05</td>
+              <td>2026-06-19</td>
+              <td>14</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-05</td>
+              <td>2026-06-20</td>
+              <td>15</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-05</td>
+              <td>2026-06-21</td>
+              <td>16</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-05</td>
+              <td>2026-06-22</td>
+              <td>17</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-05</td>
+              <td>2026-06-24</td>
+              <td>19</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-06</td>
+              <td>2026-06-15</td>
+              <td>9</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-06</td>
+              <td>2026-06-17</td>
+              <td>11</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-06</td>
+              <td>2026-06-19</td>
+              <td>13</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-06</td>
+              <td>2026-06-20</td>
+              <td>14</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-06</td>
+              <td>2026-06-21</td>
+              <td>15</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-06-06</td>
+              <td>2026-06-22</td>
+              <td>16</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </details>
+      
+    
+  </div>
+
+  
+  <div class="destcard">
+    <h4>Phuket
+      <span class="count ">0 par</span>
+    </h4>
+    <div class="sub">
+      Fly: HKT ·
+      Fra: OSL / CPH / ARN / GOT ·
+      9-19 dgr
+      
+    </div>
+    <div class="sub" style="font-style:italic;">Ny SAS-rute des 2026 - mar 2027 (vinter). A350.</div>
+    
+      <div class="sub" style="margin-top:8px;">Ingen par funnet.</div>
+    
+  </div>
+
+  
+  <div class="destcard">
+    <h4>Krabi
+      <span class="count ">0 par</span>
+    </h4>
+    <div class="sub">
+      Fly: KBV ·
+      Fra: OSL / CPH / ARN / GOT ·
+      9-19 dgr
+      
+    </div>
+    <div class="sub" style="font-style:italic;">Ny SAS-rute des 2026 - mar 2027 (vinter). 2/uke.</div>
     
       <div class="sub" style="margin-top:8px;">Ingen par funnet.</div>
     
@@ -3013,43 +3240,123 @@
   </tr>
 
   <tr>
-    <td><strong>OSL→BOS</strong></td>
-    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=BOS&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
-    <td><a href="https://awardfares.com/search?origin=OSL.&destination=BOS.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
-    <td><a href="https://wwws.airfrance.com/search/offers?connections=OSL-BOS&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
-    <td><a href="https://www.klm.com/search/offers?connections=OSL-BOS&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
-    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=OSL&destinationCity=BOS&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
-    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20BOS%20from%20OSL%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+    <td><strong>OSL→IAD</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=IAD&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=OSL.&destination=IAD.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=OSL-IAD&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=OSL-IAD&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=OSL&destinationCity=IAD&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20IAD%20from%20OSL%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
   </tr>
 
   <tr>
-    <td><strong>CPH→BOS</strong></td>
-    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=BOS&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
-    <td><a href="https://awardfares.com/search?origin=CPH.&destination=BOS.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
-    <td><a href="https://wwws.airfrance.com/search/offers?connections=CPH-BOS&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
-    <td><a href="https://www.klm.com/search/offers?connections=CPH-BOS&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
-    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=CPH&destinationCity=BOS&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
-    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20BOS%20from%20CPH%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+    <td><strong>CPH→IAD</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=IAD&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=CPH.&destination=IAD.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=CPH-IAD&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=CPH-IAD&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=CPH&destinationCity=IAD&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20IAD%20from%20CPH%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
   </tr>
 
   <tr>
-    <td><strong>ARN→BOS</strong></td>
-    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=ARN&to=BOS&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
-    <td><a href="https://awardfares.com/search?origin=ARN.&destination=BOS.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
-    <td><a href="https://wwws.airfrance.com/search/offers?connections=ARN-BOS&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
-    <td><a href="https://www.klm.com/search/offers?connections=ARN-BOS&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
-    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=ARN&destinationCity=BOS&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
-    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20BOS%20from%20ARN%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+    <td><strong>ARN→IAD</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=ARN&to=IAD&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=ARN.&destination=IAD.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=ARN-IAD&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=ARN-IAD&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=ARN&destinationCity=IAD&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20IAD%20from%20ARN%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
   </tr>
 
   <tr>
-    <td><strong>GOT→BOS</strong></td>
-    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=GOT&to=BOS&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
-    <td><a href="https://awardfares.com/search?origin=GOT.&destination=BOS.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
-    <td><a href="https://wwws.airfrance.com/search/offers?connections=GOT-BOS&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
-    <td><a href="https://www.klm.com/search/offers?connections=GOT-BOS&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
-    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=GOT&destinationCity=BOS&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
-    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20BOS%20from%20GOT%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+    <td><strong>GOT→IAD</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=GOT&to=IAD&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=GOT.&destination=IAD.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=GOT-IAD&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=GOT-IAD&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=GOT&destinationCity=IAD&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20IAD%20from%20GOT%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>OSL→YYZ</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=YYZ&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=OSL.&destination=YYZ.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=OSL-YYZ&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=OSL-YYZ&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=OSL&destinationCity=YYZ&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20YYZ%20from%20OSL%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>CPH→YYZ</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=YYZ&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=CPH.&destination=YYZ.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=CPH-YYZ&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=CPH-YYZ&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=CPH&destinationCity=YYZ&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20YYZ%20from%20CPH%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>ARN→YYZ</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=ARN&to=YYZ&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=ARN.&destination=YYZ.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=ARN-YYZ&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=ARN-YYZ&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=ARN&destinationCity=YYZ&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20YYZ%20from%20ARN%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>GOT→YYZ</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=GOT&to=YYZ&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=GOT.&destination=YYZ.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=GOT-YYZ&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=GOT-YYZ&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=GOT&destinationCity=YYZ&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20YYZ%20from%20GOT%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>OSL→SEA</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=SEA&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=OSL.&destination=SEA.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=OSL-SEA&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=OSL-SEA&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=OSL&destinationCity=SEA&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20SEA%20from%20OSL%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>CPH→SEA</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=SEA&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=CPH.&destination=SEA.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=CPH-SEA&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=CPH-SEA&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=CPH&destinationCity=SEA&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20SEA%20from%20CPH%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>ARN→SEA</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=ARN&to=SEA&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=ARN.&destination=SEA.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=ARN-SEA&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=ARN-SEA&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=ARN&destinationCity=SEA&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20SEA%20from%20ARN%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>GOT→SEA</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=GOT&to=SEA&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=GOT.&destination=SEA.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=GOT-SEA&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=GOT-SEA&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=GOT&destinationCity=SEA&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20SEA%20from%20GOT%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
   </tr>
 
   <tr>
@@ -3090,6 +3397,206 @@
     <td><a href="https://www.klm.com/search/offers?connections=GOT-MIA&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
     <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=GOT&destinationCity=MIA&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
     <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20MIA%20from%20GOT%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>OSL→TLV</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=TLV&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=OSL.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=OSL-TLV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=OSL-TLV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=OSL&destinationCity=TLV&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20TLV%20from%20OSL%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>CPH→TLV</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=TLV&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=CPH.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=CPH-TLV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=CPH-TLV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=CPH&destinationCity=TLV&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20TLV%20from%20CPH%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>ARN→TLV</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=ARN&to=TLV&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=ARN.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=ARN-TLV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=ARN-TLV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=ARN&destinationCity=TLV&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20TLV%20from%20ARN%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>GOT→TLV</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=GOT&to=TLV&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=GOT.&destination=TLV.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=GOT-TLV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=GOT-TLV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=GOT&destinationCity=TLV&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20TLV%20from%20GOT%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>OSL→DXB</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=DXB&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=OSL.&destination=DXB.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=OSL-DXB&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=OSL-DXB&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=OSL&destinationCity=DXB&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20DXB%20from%20OSL%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>CPH→DXB</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=DXB&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=CPH.&destination=DXB.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=CPH-DXB&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=CPH-DXB&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=CPH&destinationCity=DXB&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20DXB%20from%20CPH%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>ARN→DXB</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=ARN&to=DXB&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=ARN.&destination=DXB.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=ARN-DXB&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=ARN-DXB&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=ARN&destinationCity=DXB&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20DXB%20from%20ARN%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>GOT→DXB</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=GOT&to=DXB&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=GOT.&destination=DXB.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=GOT-DXB&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=GOT-DXB&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=GOT&destinationCity=DXB&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20DXB%20from%20GOT%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>OSL→BOM</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=BOM&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=OSL.&destination=BOM.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=OSL-BOM&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=OSL-BOM&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=OSL&destinationCity=BOM&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20BOM%20from%20OSL%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>CPH→BOM</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=BOM&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=CPH.&destination=BOM.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=CPH-BOM&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=CPH-BOM&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=CPH&destinationCity=BOM&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20BOM%20from%20CPH%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>ARN→BOM</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=ARN&to=BOM&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=ARN.&destination=BOM.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=ARN-BOM&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=ARN-BOM&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=ARN&destinationCity=BOM&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20BOM%20from%20ARN%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>GOT→BOM</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=GOT&to=BOM&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=GOT.&destination=BOM.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=GOT-BOM&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=GOT-BOM&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=GOT&destinationCity=BOM&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20BOM%20from%20GOT%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>OSL→HKT</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=HKT&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=OSL.&destination=HKT.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=OSL-HKT&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=OSL-HKT&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=OSL&destinationCity=HKT&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20HKT%20from%20OSL%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>CPH→HKT</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=HKT&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=CPH.&destination=HKT.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=CPH-HKT&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=CPH-HKT&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=CPH&destinationCity=HKT&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20HKT%20from%20CPH%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>ARN→HKT</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=ARN&to=HKT&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=ARN.&destination=HKT.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=ARN-HKT&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=ARN-HKT&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=ARN&destinationCity=HKT&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20HKT%20from%20ARN%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>GOT→HKT</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=GOT&to=HKT&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=GOT.&destination=HKT.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=GOT-HKT&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=GOT-HKT&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=GOT&destinationCity=HKT&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20HKT%20from%20GOT%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>OSL→KBV</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=OSL&to=KBV&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=OSL.&destination=KBV.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=OSL-KBV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=OSL-KBV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=OSL&destinationCity=KBV&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20KBV%20from%20OSL%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>CPH→KBV</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=KBV&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=CPH.&destination=KBV.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=CPH-KBV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=CPH-KBV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=CPH&destinationCity=KBV&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20KBV%20from%20CPH%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>ARN→KBV</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=ARN&to=KBV&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=ARN.&destination=KBV.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=ARN-KBV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=ARN-KBV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=ARN&destinationCity=KBV&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20KBV%20from%20ARN%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
+  </tr>
+
+  <tr>
+    <td><strong>GOT→KBV</strong></td>
+    <td><a href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=GOT&to=KBV&outDate=2027-03-17&retDate=2027-03-31&adt=2&chd=0&inf=0" target="_blank">SAS</a></td>
+    <td><a href="https://awardfares.com/search?origin=GOT.&destination=KBV.&cabin=C&program=EuroBonus" target="_blank">AF</a></td>
+    <td><a href="https://wwws.airfrance.com/search/offers?connections=GOT-KBV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">FB</a></td>
+    <td><a href="https://www.klm.com/search/offers?connections=GOT-KBV&outboundDate=2027-03-17&inboundDate=2027-03-31&cabinClass=BUSINESS&currency=MILES&type=ROUND_TRIP&passengers=ADT-2" target="_blank">KL</a></td>
+    <td><a href="https://www.delta.com/flight-search/book-a-flight?tripType=ROUND_TRIP&priceSchedule=PRICE&awardTravel=true&passengerCount=2&originCity=GOT&destinationCity=KBV&departureDate=2027-03-17&returnDate=2027-03-31&fareFamily=BE" target="_blank">DL</a></td>
+    <td><a href="https://www.google.com/travel/flights?q=Flights%20to%20KBV%20from%20GOT%20on%202027-03-17%20returning%202027-03-31" target="_blank">GF</a></td>
   </tr>
 
   <tr>
@@ -3301,7 +3808,7 @@
 
 
 <p class="meta" style="margin-top:40px;">
-  Generert 2026-04-26 21:29 UTC · 48 ruter sjekket
+  Generert 2026-04-27 08:45 UTC · 104 ruter sjekket
 </p>
 </div>
 </body>

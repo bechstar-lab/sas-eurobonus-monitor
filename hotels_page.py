@@ -17,11 +17,21 @@ CITY_GUIDES = {
             ("Lower East Side", "Trendy, restauranter, billigere enn Midtown"),
             ("Brooklyn (Williamsburg/DUMBO)", "Hipster-base, T-bane til Manhattan på 15 min"),
             ("Upper West Side", "Familievennlig, nær Central Park"),
+            ("FiDi (Financial District)", "Stille i helger, levende på hverdager. Apartment-hotels her."),
         ],
         "tips": [
             "Subway 7-day pass = ca $34 → bruk det",
             "Unngå Times Square-hoteller — overpriset, lite charm",
             "Tipping: 18-20% restaurant, $1-2 drink, $5/dag rom",
+        ],
+        "apartment_hotels": [
+            ("Mint House at 70 Pine (FiDi)", "$185+/natt, 88-93 kvm, full kjøkken, Art Deco-skyskraper. 4.66/5 (3952 reviews). 2 Michelin-restauranter i bygget (Crown Shy, SAGA). T-bane 2/3/4/5/J. Ofte beste pris/kvm-ratio."),
+            ("Sonder One Platt (FiDi)", "Marriott Bonvoy. Studio + 1BR leiligheter, ca $200-300/natt. Mer hotell-følelse enn Mint."),
+            ("Sonder Battery Park (FiDi)", "Marriott Bonvoy. Litt rolig strøk, gode views. ~$220-320/natt."),
+            ("The Beekman, Thompson Hotel (FiDi)", "5★ luksus, IKKE leiligheter — boutique rom. ~$500-700/natt. Historisk 1881-bygg, atrium-lobby. Hvis dere vil splurge."),
+            ("AKA Wall Street", "Service apartments, 2-4 ukers fokus men kortere OK. ~$300-450/natt for 1BR."),
+            ("AKA Times Square", "Service apartments midtown. ~$400-600/natt for 1BR. Mer sentralt enn FiDi."),
+            ("Beekman Tower (UN-distrikt)", "Klassiske leiligheter Midtown East. ~$280-400/natt."),
         ],
     },
     "EWR": {"same_as": "JFK"},
@@ -253,6 +263,13 @@ TEMPLATE = Template("""<!doctype html>
     if (g.tips && g.tips.length) {
       html += '<h4>Tips</h4><ul>';
       for (const t of g.tips) html += `<li>${t}</li>`;
+      html += '</ul>';
+    }
+    if (g.apartment_hotels && g.apartment_hotels.length) {
+      html += '<h4>Aktuelle apartment-hoteller</h4><ul>';
+      for (const [name, desc] of g.apartment_hotels) {
+        html += `<li><strong>${name}</strong> — ${desc}</li>`;
+      }
       html += '</ul>';
     }
     html += '</div>';

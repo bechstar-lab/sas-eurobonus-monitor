@@ -1,0 +1,17 @@
+# Bookede reiser — tracker hva som er låst inn
+# Filtrerer ut fra top deals + viser i bookede-seksjon
+
+bookings:
+  - id: ny-feb-2027-jonas-mamma
+    destination: New York
+    origin: OSL
+    dest_airport: EWR
+    out_date: 2027-02-10
+    ret_date: 2027-02-18
+    cabin: business
+    pax: 2
+    pts_used: 120000
+    ct_used: true                  # Mamma sin CT
+    booked_for: ["jonas", "mamma"]
+    notes: "SK907 OSL→EWR direkte 8t40m + retur direkte"
+    hotel_idea: "Mint House 70 Pine (FiDi)"

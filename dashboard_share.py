@@ -158,7 +158,9 @@ TEMPLATE = Template("""<!doctype html>
 
 <h1>SAS EuroBonus award-deals</h1>
 <p class="meta">
-  Sist oppdatert {{ last_run.finished or '—' }} · {{ trip_count }} aktuelle reiser
+  Sist oppdatert {{ last_run.finished or '—' }} · {{ trip_count }} aktuelle reiser ·
+  <a href="europa.html">Europa-priser →</a> ·
+  <a href="hotels.html">Hotell →</a>
 </p>
 
 <div class="intro">

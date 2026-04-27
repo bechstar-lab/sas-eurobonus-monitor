@@ -9,6 +9,7 @@ from typing import Any
 import yaml
 
 YAML_PATH = Path(__file__).resolve().parent / "destinations.yaml"
+BOOKED_PATH = Path(__file__).resolve().parent / "booked.yaml"
 
 
 @dataclass
@@ -26,6 +27,7 @@ class Destination:
     booking_deadline: str
     alert_only_better_than: int | None
     requires_connection: bool
+    deprioritize: bool
     notes: str
 
     @property
@@ -78,6 +80,7 @@ def load() -> list[Destination]:
             alert_only_better_than=int(merged["alert_only_better_than"])
                 if merged.get("alert_only_better_than") else None,
             requires_connection=bool(merged.get("requires_connection", False)),
+            deprioritize=bool(merged.get("deprioritize", False)),
             notes=str(merged.get("notes", "")),
         ))
     return out
@@ -92,3 +95,24 @@ def all_routes(skip_manual: bool = True) -> list[tuple[str, str]]:
         for r in dest.routes + dest.return_routes:
             seen.add(r)
     return sorted(seen)
+
+
+def load_booked() -> list[dict]:
+    """Last booked.yaml — reiser som allerede er booket."""
+    if not BOOKED_PATH.exists():
+        return []
+    raw = yaml.safe_load(BOOKED_PATH.read_text()) or {}
+    return raw.get("bookings", [])
+
+
+def is_trip_booked(origin: str, dest_airport: str, out_date: str, ret_date: str,
+                    cabin: str | None = None) -> bool:
+    """Sjekk om en konkret trip er allerede booket."""
+    for b in load_booked():
+        if (b.get("origin") == origin
+            and b.get("dest_airport") == dest_airport
+            and b.get("out_date") == out_date
+            and b.get("ret_date") == ret_date):
+            if cabin is None or b.get("cabin") == cabin:
+                return True
+    return False
