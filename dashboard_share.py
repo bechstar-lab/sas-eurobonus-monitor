@@ -244,6 +244,25 @@ TEMPLATE = Template("""<!doctype html>
 <div class="empty">Ingen aktuelle reiser funnet i siste sjekk.</div>
 {% endif %}
 
+{% if empty_dests %}
+<div class="group">
+  <h2>Ikke noe akkurat nå</h2>
+  <div style="background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <p style="margin:0 0 12px;color:var(--muted);">
+      Disse destinasjonene overvåkes også, men har ikke matchende reiser nå.
+      Kan dukke opp neste sjekk (hver 6. time):
+    </p>
+    {% for d in empty_dests %}
+    <div style="padding:6px 0;border-top:1px dashed var(--line);">
+      <strong>{{ d.name }}</strong>
+      <span style="color:var(--muted);"> — {{ d.airports|join('/') }}, {{ d.trip_min }}-{{ d.trip_max }} dgr</span>
+      <span style="color:var(--muted);font-style:italic;float:right;">{{ d.reason }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
 <p class="meta" style="margin-top:40px;text-align:center;">
   Generert {{ generated }}
 </p>
@@ -268,20 +287,34 @@ def render(last_run: dict | None = None) -> str:
     # Grupper trips per destinasjon, vis topp 5 per gruppe
     trip_pairs = last_run.get("trip_pairs", {})
     groups = []
+    empty_dests = []
     total = 0
-    for dest_name in [d.name for d in config.DESTINATIONS]:
-        pairs = trip_pairs.get(dest_name, [])
+    for dest in config.DESTINATIONS:
+        pairs = trip_pairs.get(dest.name, [])
         if pairs:
-            # Drop høy-risk phantoms i shared view
             clean = [p for p in pairs if p.get("phantom_risk", "low") != "high"]
             top5 = clean[:5]
             if top5:
-                groups.append((dest_name, top5))
+                groups.append((dest.name, top5))
                 total += len(top5)
+                continue
+        # Ingen par funnet — registrér med begrunnelse
+        if dest.requires_connection:
+            reason = "krever connection (sjekkes manuelt)"
+        else:
+            reason = "ingen matchende datoer i vinduet akkurat nå"
+        empty_dests.append({
+            "name": dest.name,
+            "airports": dest.airports,
+            "reason": reason,
+            "trip_min": dest.trip_min_days,
+            "trip_max": dest.trip_max_days,
+        })
 
     html = TEMPLATE.render(
         last_run=last_run,
         groups=groups,
+        empty_dests=empty_dests,
         trip_count=total,
         sas=_sas_link, fmt=_fmt, cabin_label=_cabin_label,
         generated=datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
