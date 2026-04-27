@@ -71,7 +71,8 @@ destinations:
     trip_length_days: {min: 5, max: 14}
     cabins: [business, premium_economy, economy]
     min_seats: 1
-    notes: "🔥 EKSTREM BANG: 200+ datoer J 2+ for 35k pts/vei. Halv pris av USA."
+    deprioritize: true            # Ikke aktuelt for oss men holder under monitor
+    notes: "Lav prio. Tilgjengelighet ekstrem (200+ datoer 35k pts) hvis det blir aktuelt."
 
   - name: Dubai
     airports: [DXB]
