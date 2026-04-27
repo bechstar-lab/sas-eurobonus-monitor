@@ -46,12 +46,12 @@ SEATS_AERO_KEY = os.getenv("SEATS_AERO_KEY", "").strip()
 SEATS_AERO_URL = "https://seats.aero/partnerapi/availability"
 
 SMTP_HOST = os.getenv("SMTP_HOST", "")
-SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
+SMTP_PORT = int(os.getenv("SMTP_PORT") or "587")
 SMTP_USER = os.getenv("SMTP_USER", "")
 SMTP_PASS = os.getenv("SMTP_PASS", "")
 SMTP_FROM = os.getenv("SMTP_FROM", SMTP_USER)
 ALERT_EMAIL = [e.strip() for e in os.getenv("ALERT_EMAIL", "").split(",") if e.strip()]
-DEDUP_WINDOW_DAYS = int(os.getenv("DEDUP_WINDOW_DAYS", "30"))
+DEDUP_WINDOW_DAYS = int(os.getenv("DEDUP_WINDOW_DAYS") or "30")
 
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4) "
