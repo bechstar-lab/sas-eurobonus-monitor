@@ -236,7 +236,17 @@ TEMPLATE = Template("""<!doctype html>
   .freshness.fresh { color: var(--green); }
 </style>
 <script>
+  // Detect om vi kjører lokalt (Flask) eller på Pages (statisk)
+  const isStatic = location.host.includes('github.io') || location.protocol === 'file:';
+
   async function refresh(btn) {
+    if (isStatic) {
+      btn.disabled = true;
+      btn.textContent = "Auto: hver 6. time";
+      btn.style.opacity = "0.6";
+      btn.title = "Statisk hosting — refresh skjer via GitHub Actions";
+      return;
+    }
     btn.disabled = true;
     btn.textContent = "Sjekker…";
     try {
@@ -245,7 +255,6 @@ TEMPLATE = Template("""<!doctype html>
       if (j.running) {
         btn.textContent = "Kjører allerede…";
       }
-      // poll til running=false
       const start = Date.now();
       while (true) {
         await new Promise(r => setTimeout(r, 1500));
@@ -379,6 +388,16 @@ TEMPLATE = Template("""<!doctype html>
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    // På statisk hosting: bytt knapp-tekst med info istedenfor å invitere til feil
+    if (isStatic) {
+      const btn = document.querySelector('button.refresh');
+      if (btn) {
+        btn.textContent = 'Oppdateres auto hver 6. time';
+        btn.disabled = true;
+        btn.style.opacity = "0.6";
+        btn.style.cursor = "default";
+      }
+    }
     // freshness pills
     document.querySelectorAll('[data-iso]').forEach(el => {
       const a = ageOf(el.dataset.iso);
