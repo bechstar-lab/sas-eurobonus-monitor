@@ -65,6 +65,33 @@ destinations:
     trip_length_days: {min: 6, max: 9}
     notes: "Lite tilgjengelighet (verifisert). Hold øye uansett."
 
+  - name: Atlanta
+    airports: [ATL]
+    trip_length_days: {min: 6, max: 9}
+    notes: "Delta hub. 207 datoer, 6 J 2+ for 60k pts."
+
+  # === Eksotiske / varme (SAS direkte sesongruter) ===
+  - name: Marrakech
+    airports: [RAK]
+    trip_length_days: {min: 5, max: 14}
+    cabins: [business, premium_economy, economy]
+    min_seats: 1
+    notes: "🆕 Marokko. SAS direkte 2/uke sommer 2026."
+
+  - name: Madeira
+    airports: [FNC]
+    trip_length_days: {min: 7, max: 14}
+    cabins: [business, premium_economy, economy]
+    min_seats: 1
+    notes: "🆕 Portugal-øy. SAS direkte 1/uke sommer 2026."
+
+  - name: Fuerteventura
+    airports: [FUE]
+    trip_length_days: {min: 7, max: 14}
+    cabins: [business, premium_economy, economy]
+    min_seats: 1
+    notes: "🆕 Kanariøyene. SAS direkte 1/uke (lørdager) sommer 2026."
+
   # === Midtøsten: BANG FOR BUCK 🔥 ===
   - name: Israel
     airports: [TLV]
