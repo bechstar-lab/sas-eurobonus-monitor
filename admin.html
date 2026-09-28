@@ -405,17 +405,17 @@
 <h1>SAS EuroBonus Monitor</h1>
 <div class="toolbar">
   <button class="refresh" onclick="refresh(this)">Sjekk på nytt</button>
-  <span class="freshness" data-iso="2026-09-28T05:12:00Z">2026-09-28T05:12:00Z</span>
+  <span class="freshness" data-iso="2026-09-28T13:41:58Z">2026-09-28T13:41:58Z</span>
 </div>
 <p class="meta">
-  Sist sjekket 2026-09-28T05:12:00Z ·
+  Sist sjekket 2026-09-28T13:41:58Z ·
   seats.aero API ✓ ·
   CT-deadline: 2026-12-31
 </p>
 
 <div class="stats">
-  <div class="stat"><span class="num">3810</span><span class="lbl">flights tilgjengelig</span></div>
-  <div class="stat"><span class="num">1928</span><span class="lbl">trip-par funnet</span></div>
+  <div class="stat"><span class="num">3807</span><span class="lbl">flights tilgjengelig</span></div>
+  <div class="stat"><span class="num">1925</span><span class="lbl">trip-par funnet</span></div>
   <div class="stat"><span class="num">20</span><span class="lbl">destinasjoner</span></div>
   <div class="stat"><span class="num">0</span><span class="lbl">siste alerts</span></div>
 </div>
@@ -604,6 +604,206 @@
 
 
 <div class="trip"
+     data-trip-id="Toronto|CPHYYZ|2026-11-17|2026-11-24|premium_economy"
+     data-dest="Toronto"
+     data-origin="CPH"
+     data-cabin="premium_economy"
+     data-direct="1"
+     data-outdate="2026-11-17"
+     data-retdate="2026-11-24">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>YYZ<span class="arrow">→</span>CPH
+      <span class="pill premium_economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      
+      
+    </div>
+    <div class="pts">90 000 pts · 7 dgr · Toronto</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-11-17 · CPH → YYZ</div>
+      <div class="meta">4 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-28T04:37:48.554117Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 8t 50m
+        (8t 50m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">12:50–15:40</span>
+          <span class="route">CPH→YYZ</span>
+          <span class="meta">SK949 · Airbus A321neo · 8t50m · premium</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-11-24 · YYZ → CPH</div>
+      <div class="meta">4 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-28T08:18:15.021892Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 7t 50m
+        (7t 50m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = economy (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">17:10–07:00</span>
+          <span class="route">YYZ→CPH</span>
+          <span class="meta">SK950 · Airbus A321neo · 7t50m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=YYZ&outDate=2026-11-17&adt=2&chd=0&inf=0&retDate=2026-11-24" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=YYZ.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Toronto|CPHYYZ|2026-11-17|2026-11-24|premium_economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Toronto|CPHYYZ|2026-11-17|2026-11-24|premium_economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Toronto|CPHYYZ|2026-11-17|2026-11-24|premium_economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Toronto|CPHYYZ|2026-11-17|2026-11-24|premium_economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Toronto|CPHYYZ|2026-11-17|2026-11-24|premium_economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Toronto|CPHYYZ|2026-11-17|2026-11-26|premium_economy"
+     data-dest="Toronto"
+     data-origin="CPH"
+     data-cabin="premium_economy"
+     data-direct="1"
+     data-outdate="2026-11-17"
+     data-retdate="2026-11-26">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>YYZ<span class="arrow">→</span>CPH
+      <span class="pill premium_economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      
+      
+    </div>
+    <div class="pts">90 000 pts · 9 dgr · Toronto</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-11-17 · CPH → YYZ</div>
+      <div class="meta">4 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-28T04:37:48.554117Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 8t 50m
+        (8t 50m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">12:50–15:40</span>
+          <span class="route">CPH→YYZ</span>
+          <span class="meta">SK949 · Airbus A321neo · 8t50m · premium</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-11-26 · YYZ → CPH</div>
+      <div class="meta">4 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-28T08:18:07.607364Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 7t 50m
+        (7t 50m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">17:10–07:00</span>
+          <span class="route">YYZ→CPH</span>
+          <span class="meta">SK950 · Airbus A321neo · 7t50m · premium</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=YYZ&outDate=2026-11-17&adt=2&chd=0&inf=0&retDate=2026-11-26" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=YYZ.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Toronto|CPHYYZ|2026-11-17|2026-11-26|premium_economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Toronto|CPHYYZ|2026-11-17|2026-11-26|premium_economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Toronto|CPHYYZ|2026-11-17|2026-11-26|premium_economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Toronto|CPHYYZ|2026-11-17|2026-11-26|premium_economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Toronto|CPHYYZ|2026-11-17|2026-11-26|premium_economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
      data-trip-id="Washington DC|CPHIAD|2026-12-03|2026-12-12|business"
      data-dest="Washington DC"
      data-origin="CPH"
@@ -616,7 +816,7 @@
       CPH<span class="arrow">→</span>IAD<span class="arrow">→</span>CPH
       <span class="pill business">Business</span>
       <span class="pill direct">Begge direkte</span>
-      
+      <span class="pill risk-medium">stale 14.6t</span>
       
     </div>
     <div class="pts">120 000 pts · 9 dgr · Washington DC</div>
@@ -653,7 +853,7 @@
       <div class="lbl">Hjem</div>
       <div class="when">2026-12-12 · IAD → CPH</div>
       <div class="meta">1 seter · 60 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-28T04:24:47.775572Z"></span>
+        <span class="freshness" data-iso="2026-09-28T08:42:26.814048Z"></span>
       </div>
       
       <div class="journey-summary">
@@ -704,6 +904,506 @@
 
 
 <div class="trip"
+     data-trip-id="Toronto|CPHYYZ|2026-10-21|2026-10-27|premium_economy"
+     data-dest="Toronto"
+     data-origin="CPH"
+     data-cabin="premium_economy"
+     data-direct="1"
+     data-outdate="2026-10-21"
+     data-retdate="2026-10-27">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>YYZ<span class="arrow">→</span>CPH
+      <span class="pill premium_economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      <span class="pill risk-medium">stale 21.9t</span>
+      
+    </div>
+    <div class="pts">90 000 pts · 6 dgr · Toronto</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-10-21 · CPH → YYZ</div>
+      <div class="meta">1 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-28T13:36:02.94537Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 8t 40m
+        (8t 40m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = economy (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">13:00–15:40</span>
+          <span class="route">CPH→YYZ</span>
+          <span class="meta">SK949 · Airbus A321neo · 8t40m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-10-27 · YYZ → CPH</div>
+      <div class="meta">4 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T15:48:49.562495Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 7t 50m
+        (7t 50m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = economy (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">18:10–07:00</span>
+          <span class="route">YYZ→CPH</span>
+          <span class="meta">SK950 · Airbus A321neo · 7t50m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=YYZ&outDate=2026-10-21&adt=2&chd=0&inf=0&retDate=2026-10-27" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=YYZ.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Toronto|CPHYYZ|2026-10-21|2026-10-27|premium_economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Toronto|CPHYYZ|2026-10-21|2026-10-27|premium_economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Toronto|CPHYYZ|2026-10-21|2026-10-27|premium_economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Toronto|CPHYYZ|2026-10-21|2026-10-27|premium_economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Toronto|CPHYYZ|2026-10-21|2026-10-27|premium_economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Atlanta|CPHATL|2026-10-26|2026-11-04|premium_economy"
+     data-dest="Atlanta"
+     data-origin="CPH"
+     data-cabin="premium_economy"
+     data-direct="1"
+     data-outdate="2026-10-26"
+     data-retdate="2026-11-04">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>ATL<span class="arrow">→</span>CPH
+      <span class="pill premium_economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      <span class="pill risk-medium">stale 22.3t</span>
+      
+    </div>
+    <div class="pts">90 000 pts · 9 dgr · Atlanta</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-10-26 · CPH → ATL</div>
+      <div class="meta">9 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T21:17:24.580674Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 10t 10m
+        (10t 10m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">13:50–19:00</span>
+          <span class="route">CPH→ATL</span>
+          <span class="meta">SK929 · Airbus A330-300 · 10t10m · premium</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-11-04 · ATL → CPH</div>
+      <div class="meta">9 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T15:25:27.349017Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 8t 40m
+        (8t 40m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = economy (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">19:50–10:30</span>
+          <span class="route">ATL→CPH</span>
+          <span class="meta">SK930 · Airbus A330-300 · 8t40m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=ATL&outDate=2026-10-26&adt=2&chd=0&inf=0&retDate=2026-11-04" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=ATL.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Atlanta|CPHATL|2026-10-26|2026-11-04|premium_economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Atlanta|CPHATL|2026-10-26|2026-11-04|premium_economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Atlanta|CPHATL|2026-10-26|2026-11-04|premium_economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Atlanta|CPHATL|2026-10-26|2026-11-04|premium_economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Atlanta|CPHATL|2026-10-26|2026-11-04|premium_economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Atlanta|CPHATL|2026-11-02|2026-11-09|premium_economy"
+     data-dest="Atlanta"
+     data-origin="CPH"
+     data-cabin="premium_economy"
+     data-direct="1"
+     data-outdate="2026-11-02"
+     data-retdate="2026-11-09">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>ATL<span class="arrow">→</span>CPH
+      <span class="pill premium_economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      <span class="pill risk-medium">stale 22.2t</span>
+      
+    </div>
+    <div class="pts">90 000 pts · 7 dgr · Atlanta</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-11-02 · CPH → ATL</div>
+      <div class="meta">9 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T17:52:58.181536Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 10t 10m
+        (10t 10m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">13:50–18:00</span>
+          <span class="route">CPH→ATL</span>
+          <span class="meta">SK929 · Airbus A330-300 · 10t10m · premium</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-11-09 · ATL → CPH</div>
+      <div class="meta">9 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T15:28:41.168125Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 8t 40m
+        (8t 40m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">19:50–10:30</span>
+          <span class="route">ATL→CPH</span>
+          <span class="meta">SK930 · Airbus A330-300 · 8t40m · premium</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=ATL&outDate=2026-11-02&adt=2&chd=0&inf=0&retDate=2026-11-09" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=ATL.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Atlanta|CPHATL|2026-11-02|2026-11-09|premium_economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Atlanta|CPHATL|2026-11-02|2026-11-09|premium_economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Atlanta|CPHATL|2026-11-02|2026-11-09|premium_economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Atlanta|CPHATL|2026-11-02|2026-11-09|premium_economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Atlanta|CPHATL|2026-11-02|2026-11-09|premium_economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Atlanta|CPHATL|2026-11-02|2026-11-11|premium_economy"
+     data-dest="Atlanta"
+     data-origin="CPH"
+     data-cabin="premium_economy"
+     data-direct="1"
+     data-outdate="2026-11-02"
+     data-retdate="2026-11-11">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>ATL<span class="arrow">→</span>CPH
+      <span class="pill premium_economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      <span class="pill risk-medium">stale 22.1t</span>
+      
+    </div>
+    <div class="pts">90 000 pts · 9 dgr · Atlanta</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-11-02 · CPH → ATL</div>
+      <div class="meta">9 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T17:52:58.181536Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 10t 10m
+        (10t 10m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">13:50–18:00</span>
+          <span class="route">CPH→ATL</span>
+          <span class="meta">SK929 · Airbus A330-300 · 10t10m · premium</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-11-11 · ATL → CPH</div>
+      <div class="meta">6 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T15:33:13.11856Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 8t 40m
+        (8t 40m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">19:50–10:30</span>
+          <span class="route">ATL→CPH</span>
+          <span class="meta">SK930 · Airbus A330-300 · 8t40m · premium</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=ATL&outDate=2026-11-02&adt=2&chd=0&inf=0&retDate=2026-11-11" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=ATL.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Atlanta|CPHATL|2026-11-02|2026-11-11|premium_economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Atlanta|CPHATL|2026-11-02|2026-11-11|premium_economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Atlanta|CPHATL|2026-11-02|2026-11-11|premium_economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Atlanta|CPHATL|2026-11-02|2026-11-11|premium_economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Atlanta|CPHATL|2026-11-02|2026-11-11|premium_economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Atlanta|CPHATL|2026-11-04|2026-11-11|premium_economy"
+     data-dest="Atlanta"
+     data-origin="CPH"
+     data-cabin="premium_economy"
+     data-direct="1"
+     data-outdate="2026-11-04"
+     data-retdate="2026-11-11">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>ATL<span class="arrow">→</span>CPH
+      <span class="pill premium_economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      <span class="pill risk-medium">stale 22.1t</span>
+      
+    </div>
+    <div class="pts">90 000 pts · 7 dgr · Atlanta</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-11-04 · CPH → ATL</div>
+      <div class="meta">9 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-28T11:14:48.309449Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 10t 10m
+        (10t 10m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = economy (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">13:50–18:00</span>
+          <span class="route">CPH→ATL</span>
+          <span class="meta">SK929 · Airbus A330-300 · 10t10m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-11-11 · ATL → CPH</div>
+      <div class="meta">6 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T15:33:13.11856Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 8t 40m
+        (8t 40m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">19:50–10:30</span>
+          <span class="route">ATL→CPH</span>
+          <span class="meta">SK930 · Airbus A330-300 · 8t40m · premium</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=ATL&outDate=2026-11-04&adt=2&chd=0&inf=0&retDate=2026-11-11" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=ATL.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Atlanta|CPHATL|2026-11-04|2026-11-11|premium_economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Atlanta|CPHATL|2026-11-04|2026-11-11|premium_economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Atlanta|CPHATL|2026-11-04|2026-11-11|premium_economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Atlanta|CPHATL|2026-11-04|2026-11-11|premium_economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Atlanta|CPHATL|2026-11-04|2026-11-11|premium_economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
      data-trip-id="Atlanta|CPHATL|2026-11-09|2026-11-16|premium_economy"
      data-dest="Atlanta"
      data-origin="CPH"
@@ -716,7 +1416,7 @@
       CPH<span class="arrow">→</span>ATL<span class="arrow">→</span>CPH
       <span class="pill premium_economy">Premium Eco</span>
       <span class="pill direct">Begge direkte</span>
-      
+      <span class="pill risk-medium">stale 17.7t</span>
       
     </div>
     <div class="pts">90 000 pts · 7 dgr · Atlanta</div>
@@ -804,44 +1504,44 @@
 
 
 <div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2026-11-21|2026-11-28|business"
-     data-dest="Marrakech"
+     data-trip-id="Atlanta|CPHATL|2026-12-04|2026-12-13|premium_economy"
+     data-dest="Atlanta"
      data-origin="CPH"
-     data-cabin="business"
+     data-cabin="premium_economy"
      data-direct="1"
-     data-outdate="2026-11-21"
-     data-retdate="2026-11-28">
+     data-outdate="2026-12-04"
+     data-retdate="2026-12-13">
   <div class="head">
     <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
+      CPH<span class="arrow">→</span>ATL<span class="arrow">→</span>CPH
+      <span class="pill premium_economy">Premium Eco</span>
       <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 22.4t</span>
+      <span class="pill risk-medium">stale 22.3t</span>
       
     </div>
-    <div class="pts">70 000 pts · 7 dgr · Marrakech</div>
+    <div class="pts">90 000 pts · 9 dgr · Atlanta</div>
   </div>
   <div class="legs">
     
     <div class="leg">
       <div class="lbl">Ut</div>
-      <div class="when">2026-11-21 · CPH → RAK</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T07:43:14.537816Z"></span>
+      <div class="when">2026-12-04 · CPH → ATL</div>
+      <div class="meta">6 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T15:22:09.343972Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
+        Total 9t 55m
+        (9t 55m fly,
          0t 00m vente)
-        
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
       </div>
       <div class="segments">
         
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
+        <div class="seg ">
+          <span class="time">13:50–17:45</span>
+          <span class="route">CPH→ATL</span>
+          <span class="meta">SK929 · Airbus A350-900 · 9t55m · premium</span>
         </div>
         
         
@@ -851,23 +1551,23 @@
     
     <div class="leg">
       <div class="lbl">Hjem</div>
-      <div class="when">2026-11-28 · RAK → CPH</div>
-      <div class="meta">4 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T06:48:53.094639Z"></span>
+      <div class="when">2026-12-13 · ATL → CPH</div>
+      <div class="meta">6 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-28T08:56:37.41636Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
+        Total 8t 40m
+        (8t 40m fly,
          0t 00m vente)
-        
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
       </div>
       <div class="segments">
         
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
+        <div class="seg ">
+          <span class="time">19:50–10:30</span>
+          <span class="route">ATL→CPH</span>
+          <span class="meta">SK930 · Airbus A330-300 · 8t40m · premium</span>
         </div>
         
         
@@ -876,25 +1576,25 @@
     </div>
     
   </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2026-11-21&adt=2&chd=0&inf=0&retDate=2026-11-28" target="_blank">
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=ATL&outDate=2026-12-04&adt=2&chd=0&inf=0&retDate=2026-12-13" target="_blank">
     Book fly på SAS →
   </a>
   <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+    <a href="https://awardfares.com/search?origin=CPH.&destination=ATL.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
   </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2026-11-21|2026-11-28|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2026-11-21|2026-11-28|business', this)">Ikke aktuell</button>
+  <button class="book-btn" onclick="toggleBook('Atlanta|CPHATL|2026-12-04|2026-12-13|premium_economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Atlanta|CPHATL|2026-12-04|2026-12-13|premium_economy', this)">Ikke aktuell</button>
   <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
     ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
   </span>
 
   <div class="feedback">
     <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2026-11-21|2026-11-28|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2026-11-21|2026-11-28|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+      <button data-value="up" onclick="rate('Atlanta|CPHATL|2026-12-04|2026-12-13|premium_economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Atlanta|CPHATL|2026-12-04|2026-12-13|premium_economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
     </span>
     <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2026-11-21|2026-11-28|business', this)"></textarea>
+              onblur="saveComment('Atlanta|CPHATL|2026-12-04|2026-12-13|premium_economy', this)"></textarea>
     <span class="saved"></span>
   </div>
 
@@ -904,1144 +1604,44 @@
 
 
 <div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2026-11-21|2026-12-05|business"
-     data-dest="Marrakech"
+     data-trip-id="Atlanta|CPHATL|2027-01-25|2027-02-01|premium_economy"
+     data-dest="Atlanta"
      data-origin="CPH"
-     data-cabin="business"
+     data-cabin="premium_economy"
      data-direct="1"
-     data-outdate="2026-11-21"
-     data-retdate="2026-12-05">
+     data-outdate="2027-01-25"
+     data-retdate="2027-02-01">
   <div class="head">
     <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 21.5t</span>
-      
-    </div>
-    <div class="pts">70 000 pts · 14 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2026-11-21 · CPH → RAK</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T07:43:14.537816Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2026-12-05 · RAK → CPH</div>
-      <div class="meta">3 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T07:46:37.715951Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2026-11-21&adt=2&chd=0&inf=0&retDate=2026-12-05" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2026-11-21|2026-12-05|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2026-11-21|2026-12-05|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2026-11-21|2026-12-05|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2026-11-21|2026-12-05|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2026-11-21|2026-12-05|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2026-11-28|2026-12-05|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2026-11-28"
-     data-retdate="2026-12-05">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 23.3t</span>
-      
-    </div>
-    <div class="pts">70 000 pts · 7 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2026-11-28 · CPH → RAK</div>
-      <div class="meta">7 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T05:55:00.884846Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2026-12-05 · RAK → CPH</div>
-      <div class="meta">3 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T07:46:37.715951Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2026-11-28&adt=2&chd=0&inf=0&retDate=2026-12-05" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2026-11-28|2026-12-05|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2026-11-28|2026-12-05|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2026-11-28|2026-12-05|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2026-11-28|2026-12-05|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2026-11-28|2026-12-05|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2026-11-28|2026-12-12|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2026-11-28"
-     data-retdate="2026-12-12">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 23.3t</span>
-      
-    </div>
-    <div class="pts">70 000 pts · 14 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2026-11-28 · CPH → RAK</div>
-      <div class="meta">7 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T05:55:00.884846Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2026-12-12 · RAK → CPH</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T08:13:23.873901Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2026-11-28&adt=2&chd=0&inf=0&retDate=2026-12-12" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2026-11-28|2026-12-12|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2026-11-28|2026-12-12|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2026-11-28|2026-12-12|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2026-11-28|2026-12-12|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2026-11-28|2026-12-12|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2026-12-05|2026-12-12|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2026-12-05"
-     data-retdate="2026-12-12">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 23.6t</span>
-      
-    </div>
-    <div class="pts">70 000 pts · 7 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2026-12-05 · CPH → RAK</div>
-      <div class="meta">8 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T05:35:37.915309Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2026-12-12 · RAK → CPH</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T08:13:23.873901Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2026-12-05&adt=2&chd=0&inf=0&retDate=2026-12-12" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2026-12-05|2026-12-12|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2026-12-05|2026-12-12|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2026-12-05|2026-12-12|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2026-12-05|2026-12-12|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2026-12-05|2026-12-12|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2026-12-05|2026-12-19|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2026-12-05"
-     data-retdate="2026-12-19">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 23.6t</span>
-      
-    </div>
-    <div class="pts">70 000 pts · 14 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2026-12-05 · CPH → RAK</div>
-      <div class="meta">8 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T05:35:37.915309Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2026-12-19 · RAK → CPH</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T07:42:03.562724Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2026-12-05&adt=2&chd=0&inf=0&retDate=2026-12-19" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2026-12-05|2026-12-19|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2026-12-05|2026-12-19|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2026-12-05|2026-12-19|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2026-12-05|2026-12-19|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2026-12-05|2026-12-19|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2026-12-12|2026-12-19|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2026-12-12"
-     data-retdate="2026-12-19">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 22.7t</span>
-      
-    </div>
-    <div class="pts">70 000 pts · 7 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2026-12-12 · CPH → RAK</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T06:28:48.128445Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2026-12-19 · RAK → CPH</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T07:42:03.562724Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2026-12-12&adt=2&chd=0&inf=0&retDate=2026-12-19" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2026-12-12|2026-12-19|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2026-12-12|2026-12-19|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2026-12-12|2026-12-19|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2026-12-12|2026-12-19|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2026-12-12|2026-12-19|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2026-12-12|2026-12-26|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2026-12-12"
-     data-retdate="2026-12-26">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 22.7t</span>
-      
-    </div>
-    <div class="pts">70 000 pts · 14 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2026-12-12 · CPH → RAK</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T06:28:48.128445Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2026-12-26 · RAK → CPH</div>
-      <div class="meta">6 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T06:47:30.643489Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2026-12-12&adt=2&chd=0&inf=0&retDate=2026-12-26" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2026-12-12|2026-12-26|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2026-12-12|2026-12-26|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2026-12-12|2026-12-26|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2026-12-12|2026-12-26|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2026-12-12|2026-12-26|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2027-03-18|2027-03-23|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2027-03-18"
-     data-retdate="2027-03-23">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 22.8t</span>
-      
-    </div>
-    <div class="pts">70 000 pts · 5 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-03-18 · CPH → RAK</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T06:26:21.217896Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">11:30–15:00</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-03-23 · RAK → CPH</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T06:59:47.887454Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">17:40–23:10</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2027-03-18&adt=2&chd=0&inf=0&retDate=2027-03-23" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2027-03-18|2027-03-23|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2027-03-18|2027-03-23|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2027-03-18|2027-03-23|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2027-03-18|2027-03-23|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2027-03-18|2027-03-23|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2027-03-18|2027-03-25|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2027-03-18"
-     data-retdate="2027-03-25">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 22.8t</span>
-      
-    </div>
-    <div class="pts">70 000 pts · 7 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-03-18 · CPH → RAK</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T06:26:21.217896Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">11:30–15:00</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-03-25 · RAK → CPH</div>
-      <div class="meta">9 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T06:44:26.75851Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">21:25–02:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2027-03-18&adt=2&chd=0&inf=0&retDate=2027-03-25" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2027-03-18|2027-03-25|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2027-03-18|2027-03-25|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2027-03-18|2027-03-25|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2027-03-18|2027-03-25|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2027-03-18|2027-03-25|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2027-01-02|2027-01-16|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2027-01-02"
-     data-retdate="2027-01-16">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 22.8t</span>
-      
-    </div>
-    <div class="pts">76 227 pts · 14 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-01-02 · CPH → RAK</div>
-      <div class="meta">9 seter · 41 227 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T06:21:03.01198Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-01-16 · RAK → CPH</div>
-      <div class="meta">3 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T07:45:34.851296Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2027-01-02&adt=2&chd=0&inf=0&retDate=2027-01-16" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2027-01-02|2027-01-16|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2027-01-02|2027-01-16|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2027-01-02|2027-01-16|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2027-01-02|2027-01-16|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2027-01-02|2027-01-16|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2027-01-16|2027-01-23|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2027-01-16"
-     data-retdate="2027-01-23">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
-      <span class="pill direct">Begge direkte</span>
-      <span class="pill risk-medium">stale 23.5t</span>
-      
-    </div>
-    <div class="pts">76 227 pts · 7 dgr · Marrakech</div>
-  </div>
-  <div class="legs">
-    
-    <div class="leg">
-      <div class="lbl">Ut</div>
-      <div class="when">2027-01-16 · CPH → RAK</div>
-      <div class="meta">3 seter · 41 227 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T05:40:54.738304Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-    <div class="leg">
-      <div class="lbl">Hjem</div>
-      <div class="when">2027-01-23 · RAK → CPH</div>
-      <div class="meta">2 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T07:06:29.991595Z"></span>
-      </div>
-      
-      <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
-         0t 00m vente)
-        
-      </div>
-      <div class="segments">
-        
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2027-01-16&adt=2&chd=0&inf=0&retDate=2027-01-23" target="_blank">
-    Book fly på SAS →
-  </a>
-  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
-  </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2027-01-16|2027-01-23|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2027-01-16|2027-01-23|business', this)">Ikke aktuell</button>
-  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
-    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
-  </span>
-
-  <div class="feedback">
-    <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2027-01-16|2027-01-23|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2027-01-16|2027-01-23|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
-    </span>
-    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2027-01-16|2027-01-23|business', this)"></textarea>
-    <span class="saved"></span>
-  </div>
-
-  
-</div>
-
-
-
-<div class="trip"
-     data-trip-id="Marrakech|CPHRAK|2027-01-23|2027-01-30|business"
-     data-dest="Marrakech"
-     data-origin="CPH"
-     data-cabin="business"
-     data-direct="1"
-     data-outdate="2027-01-23"
-     data-retdate="2027-01-30">
-  <div class="head">
-    <div class="route">
-      CPH<span class="arrow">→</span>RAK<span class="arrow">→</span>CPH
-      <span class="pill business">Business</span>
+      CPH<span class="arrow">→</span>ATL<span class="arrow">→</span>CPH
+      <span class="pill premium_economy">Premium Eco</span>
       <span class="pill direct">Begge direkte</span>
       <span class="pill risk-medium">stale 23.0t</span>
       
     </div>
-    <div class="pts">76 844 pts · 7 dgr · Marrakech</div>
+    <div class="pts">90 000 pts · 7 dgr · Atlanta</div>
   </div>
   <div class="legs">
     
     <div class="leg">
       <div class="lbl">Ut</div>
-      <div class="when">2027-01-23 · CPH → RAK</div>
-      <div class="meta">6 seter · 35 000 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T06:12:37.690355Z"></span>
+      <div class="when">2027-01-25 · CPH → ATL</div>
+      <div class="meta">9 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T14:40:16.888683Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 3t 30m
-        (3t 30m fly,
+        Total 10t 10m
+        (10t 10m fly,
          0t 00m vente)
-        
+        · <span style="color:var(--red);">long-haul = economy (ikke business!)</span>
       </div>
       <div class="segments">
         
-        <div class="seg business">
-          <span class="time">12:05–15:35</span>
-          <span class="route">CPH→RAK</span>
-          <span class="meta">SK2509 · Airbus A320neo · 3t30m · business</span>
+        <div class="seg ">
+          <span class="time">13:50–18:00</span>
+          <span class="route">CPH→ATL</span>
+          <span class="meta">SK929 · Airbus A330-300 · 10t10m · economy</span>
         </div>
         
         
@@ -2051,23 +1651,23 @@
     
     <div class="leg">
       <div class="lbl">Hjem</div>
-      <div class="when">2027-01-30 · RAK → CPH</div>
-      <div class="meta">9 seter · 41 844 pts · Direct · SK
-        <span class="freshness" data-iso="2026-09-27T07:34:39.599144Z"></span>
+      <div class="when">2027-02-01 · ATL → CPH</div>
+      <div class="meta">2 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-28T08:34:26.473977Z"></span>
       </div>
       
       <div class="journey-summary">
-        Total 5t 30m
-        (5t 30m fly,
+        Total 8t 40m
+        (8t 40m fly,
          0t 00m vente)
-        
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
       </div>
       <div class="segments">
         
-        <div class="seg business">
-          <span class="time">16:25–21:55</span>
-          <span class="route">RAK→CPH</span>
-          <span class="meta">SK2510 · Airbus A320neo · 5t30m · business</span>
+        <div class="seg ">
+          <span class="time">19:50–10:30</span>
+          <span class="route">ATL→CPH</span>
+          <span class="meta">SK930 · Airbus A330-300 · 8t40m · premium</span>
         </div>
         
         
@@ -2076,25 +1676,225 @@
     </div>
     
   </div>
-  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=RAK&outDate=2027-01-23&adt=2&chd=0&inf=0&retDate=2027-01-30" target="_blank">
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=ATL&outDate=2027-01-25&adt=2&chd=0&inf=0&retDate=2027-02-01" target="_blank">
     Book fly på SAS →
   </a>
   <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
-    <a href="https://awardfares.com/search?origin=CPH.&destination=RAK.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+    <a href="https://awardfares.com/search?origin=CPH.&destination=ATL.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
   </span>
-  <button class="book-btn" onclick="toggleBook('Marrakech|CPHRAK|2027-01-23|2027-01-30|business', this)">Marker som booket</button>
-  <button class="skip-btn" onclick="toggleSkip('Marrakech|CPHRAK|2027-01-23|2027-01-30|business', this)">Ikke aktuell</button>
+  <button class="book-btn" onclick="toggleBook('Atlanta|CPHATL|2027-01-25|2027-02-01|premium_economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Atlanta|CPHATL|2027-01-25|2027-02-01|premium_economy', this)">Ikke aktuell</button>
   <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
     ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
   </span>
 
   <div class="feedback">
     <span class="rate">
-      <button data-value="up" onclick="rate('Marrakech|CPHRAK|2027-01-23|2027-01-30|business','up',this.parentElement)" title="Bra forslag">👍</button>
-      <button data-value="down" onclick="rate('Marrakech|CPHRAK|2027-01-23|2027-01-30|business','down',this.parentElement)" title="Dårlig forslag">👎</button>
+      <button data-value="up" onclick="rate('Atlanta|CPHATL|2027-01-25|2027-02-01|premium_economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Atlanta|CPHATL|2027-01-25|2027-02-01|premium_economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
     </span>
     <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
-              onblur="saveComment('Marrakech|CPHRAK|2027-01-23|2027-01-30|business', this)"></textarea>
+              onblur="saveComment('Atlanta|CPHATL|2027-01-25|2027-02-01|premium_economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Atlanta|CPHATL|2027-01-25|2027-02-03|premium_economy"
+     data-dest="Atlanta"
+     data-origin="CPH"
+     data-cabin="premium_economy"
+     data-direct="1"
+     data-outdate="2027-01-25"
+     data-retdate="2027-02-03">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>ATL<span class="arrow">→</span>CPH
+      <span class="pill premium_economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      <span class="pill risk-medium">stale 23.0t</span>
+      
+    </div>
+    <div class="pts">90 000 pts · 9 dgr · Atlanta</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2027-01-25 · CPH → ATL</div>
+      <div class="meta">9 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T14:40:16.888683Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 10t 10m
+        (10t 10m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = economy (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">13:50–18:00</span>
+          <span class="route">CPH→ATL</span>
+          <span class="meta">SK929 · Airbus A330-300 · 10t10m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2027-02-03 · ATL → CPH</div>
+      <div class="meta">1 seter · 45 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-28T09:20:35.640151Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 8t 40m
+        (8t 40m fly,
+         0t 00m vente)
+        · <span style="color:var(--red);">long-haul = premium (ikke business!)</span>
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">19:50–10:30</span>
+          <span class="route">ATL→CPH</span>
+          <span class="meta">SK930 · Airbus A330-300 · 8t40m · premium</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=ATL&outDate=2027-01-25&adt=2&chd=0&inf=0&retDate=2027-02-03" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=ATL.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Atlanta|CPHATL|2027-01-25|2027-02-03|premium_economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Atlanta|CPHATL|2027-01-25|2027-02-03|premium_economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Atlanta|CPHATL|2027-01-25|2027-02-03|premium_economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Atlanta|CPHATL|2027-01-25|2027-02-03|premium_economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Atlanta|CPHATL|2027-01-25|2027-02-03|premium_economy', this)"></textarea>
+    <span class="saved"></span>
+  </div>
+
+  
+</div>
+
+
+
+<div class="trip"
+     data-trip-id="Korea|CPHICN|2026-11-22|2026-12-08|economy"
+     data-dest="Korea"
+     data-origin="CPH"
+     data-cabin="economy"
+     data-direct="1"
+     data-outdate="2026-11-22"
+     data-retdate="2026-12-08">
+  <div class="head">
+    <div class="route">
+      CPH<span class="arrow">→</span>ICN<span class="arrow">→</span>CPH
+      <span class="pill economy">Premium Eco</span>
+      <span class="pill direct">Begge direkte</span>
+      <span class="pill risk-medium">stale 18.2t</span>
+      
+    </div>
+    <div class="pts">60 000 pts · 16 dgr · Korea</div>
+  </div>
+  <div class="legs">
+    
+    <div class="leg">
+      <div class="lbl">Ut</div>
+      <div class="when">2026-11-22 · CPH → ICN</div>
+      <div class="meta">9 seter · 30 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-27T19:32:25.201296Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 11t 40m
+        (11t 40m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">23:20–19:00</span>
+          <span class="route">CPH→ICN</span>
+          <span class="meta">SK987 · Airbus A350-900 · 11t40m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+    <div class="leg">
+      <div class="lbl">Hjem</div>
+      <div class="when">2026-12-08 · ICN → CPH</div>
+      <div class="meta">1 seter · 30 000 pts · Direct · SK
+        <span class="freshness" data-iso="2026-09-28T05:39:33.065498Z"></span>
+      </div>
+      
+      <div class="journey-summary">
+        Total 13t 40m
+        (13t 40m fly,
+         0t 00m vente)
+        
+      </div>
+      <div class="segments">
+        
+        <div class="seg ">
+          <span class="time">23:45–05:25</span>
+          <span class="route">ICN→CPH</span>
+          <span class="meta">SK988 · Airbus A350-900 · 13t40m · economy</span>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  <a class="booknow" href="https://www.flysas.com/en/book/flights/?bookingFlow=BONUS&from=CPH&to=ICN&outDate=2026-11-22&adt=2&chd=0&inf=0&retDate=2026-12-08" target="_blank">
+    Book fly på SAS →
+  </a>
+  <span style="margin-left:14px;font-family:-apple-system,sans-serif;font-size:13px;">
+    <a href="https://awardfares.com/search?origin=CPH.&destination=ICN.&cabin=C&program=EuroBonus" target="_blank" style="color:var(--muted);">AwardFares</a>
+  </span>
+  <button class="book-btn" onclick="toggleBook('Korea|CPHICN|2026-11-22|2026-12-08|economy', this)">Marker som booket</button>
+  <button class="skip-btn" onclick="toggleSkip('Korea|CPHICN|2026-11-22|2026-12-08|economy', this)">Ikke aktuell</button>
+  <span class="trip-booked-msg" style="display:none;margin-left:10px;font-size:13px;color:var(--gold);font-family:-apple-system,sans-serif;">
+    ✓ Sjekk <a href="/hotels">Hotell-siden</a> for neste steg
+  </span>
+
+  <div class="feedback">
+    <span class="rate">
+      <button data-value="up" onclick="rate('Korea|CPHICN|2026-11-22|2026-12-08|economy','up',this.parentElement)" title="Bra forslag">👍</button>
+      <button data-value="down" onclick="rate('Korea|CPHICN|2026-11-22|2026-12-08|economy','down',this.parentElement)" title="Dårlig forslag">👎</button>
+    </span>
+    <textarea placeholder="Notat / tilbakemelding på dette forslaget…"
+              onblur="saveComment('Korea|CPHICN|2026-11-22|2026-12-08|economy', this)"></textarea>
     <span class="saved"></span>
   </div>
 
@@ -2109,7 +1909,7 @@
   
   <div class="destcard">
     <h4>New York
-      <span class="count has">267 par</span>
+      <span class="count has">262 par</span>
     </h4>
     <div class="sub">
       Fly: JFK, EWR ·
@@ -2126,7 +1926,7 @@
       </div>
       
       <details>
-        <summary>Vis alle 267 par</summary>
+        <summary>Vis alle 262 par</summary>
         <table style="margin-top:6px;">
           <thead><tr><th>Ut</th><th>Hjem</th><th>Dgr</th><th>Fra</th><th>Klasse</th><th>Pts</th></tr></thead>
           <tbody>
@@ -2141,54 +1941,36 @@
             </tr>
           
             <tr>
-              <td>2027-01-18</td>
-              <td>2027-01-24</td>
+              <td>2026-11-02</td>
+              <td>2026-11-08</td>
               <td>6</td>
-              <td>OSL→EWR</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-18</td>
-              <td>2027-01-25</td>
-              <td>7</td>
-              <td>OSL→EWR</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-18</td>
-              <td>2027-01-26</td>
-              <td>8</td>
-              <td>OSL→EWR</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-18</td>
-              <td>2027-01-24</td>
-              <td>6</td>
-              <td>OSL→JFK</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-18</td>
-              <td>2027-01-25</td>
-              <td>7</td>
-              <td>OSL→JFK</td>
+              <td>CPH→EWR</td>
               <td>W</td>
               <td>90 000</td>
             </tr>
           
             <tr>
               <td>2026-11-02</td>
-              <td>2026-11-08</td>
+              <td>2026-11-11</td>
+              <td>9</td>
+              <td>CPH→EWR</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-05</td>
+              <td>2026-11-11</td>
               <td>6</td>
+              <td>CPH→EWR</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-05</td>
+              <td>2026-11-12</td>
+              <td>7</td>
               <td>CPH→EWR</td>
               <td>W</td>
               <td>90 000</td>
@@ -2205,6 +1987,15 @@
           
             <tr>
               <td>2026-11-06</td>
+              <td>2026-11-12</td>
+              <td>6</td>
+              <td>CPH→EWR</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-06</td>
               <td>2026-11-13</td>
               <td>7</td>
               <td>CPH→EWR</td>
@@ -2213,8 +2004,8 @@
             </tr>
           
             <tr>
-              <td>2027-01-24</td>
-              <td>2027-01-30</td>
+              <td>2026-11-07</td>
+              <td>2026-11-13</td>
               <td>6</td>
               <td>CPH→EWR</td>
               <td>W</td>
@@ -2222,26 +2013,8 @@
             </tr>
           
             <tr>
-              <td>2027-01-24</td>
-              <td>2027-01-31</td>
-              <td>7</td>
-              <td>CPH→EWR</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-24</td>
-              <td>2027-02-01</td>
-              <td>8</td>
-              <td>CPH→EWR</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-24</td>
-              <td>2027-02-02</td>
+              <td>2026-11-08</td>
+              <td>2026-11-17</td>
               <td>9</td>
               <td>CPH→EWR</td>
               <td>W</td>
@@ -2249,8 +2022,26 @@
             </tr>
           
             <tr>
-              <td>2026-11-02</td>
-              <td>2026-11-10</td>
+              <td>2026-11-17</td>
+              <td>2026-11-26</td>
+              <td>9</td>
+              <td>CPH→EWR</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-03</td>
+              <td>2026-11-12</td>
+              <td>9</td>
+              <td>CPH→JFK</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-04</td>
+              <td>2026-11-12</td>
               <td>8</td>
               <td>CPH→JFK</td>
               <td>W</td>
@@ -2258,9 +2049,63 @@
             </tr>
           
             <tr>
-              <td>2026-11-03</td>
-              <td>2026-11-10</td>
+              <td>2026-11-04</td>
+              <td>2026-11-13</td>
+              <td>9</td>
+              <td>CPH→JFK</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-05</td>
+              <td>2026-11-12</td>
               <td>7</td>
+              <td>CPH→JFK</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-05</td>
+              <td>2026-11-13</td>
+              <td>8</td>
+              <td>CPH→JFK</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-06</td>
+              <td>2026-11-12</td>
+              <td>6</td>
+              <td>CPH→JFK</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-06</td>
+              <td>2026-11-13</td>
+              <td>7</td>
+              <td>CPH→JFK</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-07</td>
+              <td>2026-11-13</td>
+              <td>6</td>
+              <td>CPH→JFK</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-09</td>
+              <td>2026-11-17</td>
+              <td>8</td>
               <td>CPH→JFK</td>
               <td>W</td>
               <td>90 000</td>
@@ -2303,17 +2148,8 @@
             </tr>
           
             <tr>
-              <td>2027-01-18</td>
-              <td>2027-01-24</td>
-              <td>6</td>
-              <td>CPH→JFK</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-18</td>
-              <td>2027-01-25</td>
+              <td>2026-11-19</td>
+              <td>2026-11-26</td>
               <td>7</td>
               <td>CPH→JFK</td>
               <td>W</td>
@@ -2321,80 +2157,44 @@
             </tr>
           
             <tr>
-              <td>2027-01-23</td>
-              <td>2027-02-01</td>
-              <td>9</td>
-              <td>CPH→JFK</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-24</td>
-              <td>2027-02-01</td>
+              <td>2026-11-09</td>
+              <td>2026-11-17</td>
               <td>8</td>
-              <td>CPH→JFK</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2026-10-02</td>
-              <td>2026-10-11</td>
-              <td>9</td>
               <td>CPH→EWR</td>
               <td>W</td>
               <td>90 000</td>
             </tr>
           
             <tr>
-              <td>2026-10-02</td>
-              <td>2026-10-11</td>
-              <td>9</td>
+              <td>2026-11-10</td>
+              <td>2026-11-17</td>
+              <td>7</td>
               <td>CPH→EWR</td>
-              <td>J</td>
-              <td>120 000</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-11</td>
+              <td>2026-11-17</td>
+              <td>6</td>
+              <td>CPH→EWR</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-18</td>
+              <td>2026-11-26</td>
+              <td>8</td>
+              <td>CPH→EWR</td>
+              <td>W</td>
+              <td>90 000</td>
             </tr>
           
             <tr>
               <td>2027-01-14</td>
               <td>2027-01-21</td>
-              <td>7</td>
-              <td>CPH→EWR</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-14</td>
-              <td>2027-01-22</td>
-              <td>8</td>
-              <td>CPH→EWR</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-14</td>
-              <td>2027-01-23</td>
-              <td>9</td>
-              <td>CPH→EWR</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-19</td>
-              <td>2027-01-25</td>
-              <td>6</td>
-              <td>CPH→EWR</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-19</td>
-              <td>2027-01-26</td>
               <td>7</td>
               <td>CPH→EWR</td>
               <td>W</td>
@@ -2479,7 +2279,7 @@
   
   <div class="destcard">
     <h4>Toronto
-      <span class="count has">2 par</span>
+      <span class="count has">3 par</span>
     </h4>
     <div class="sub">
       Fly: YYZ ·
@@ -2496,7 +2296,7 @@
       </div>
       
       <details>
-        <summary>Vis alle 2 par</summary>
+        <summary>Vis alle 3 par</summary>
         <table style="margin-top:6px;">
           <thead><tr><th>Ut</th><th>Hjem</th><th>Dgr</th><th>Fra</th><th>Klasse</th><th>Pts</th></tr></thead>
           <tbody>
@@ -2514,6 +2314,15 @@
               <td>2026-11-17</td>
               <td>2026-11-26</td>
               <td>9</td>
+              <td>CPH→YYZ</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-21</td>
+              <td>2026-10-27</td>
+              <td>6</td>
               <td>CPH→YYZ</td>
               <td>W</td>
               <td>90 000</td>
@@ -2563,7 +2372,7 @@
   
   <div class="destcard">
     <h4>Atlanta
-      <span class="count has">26 par</span>
+      <span class="count has">29 par</span>
     </h4>
     <div class="sub">
       Fly: ATL ·
@@ -2575,24 +2384,15 @@
     
       
       <div style="margin-top:8px;font-size:13px;">
-        Best: <strong>2026-11-09 → 2026-11-16</strong>
-        (7 dgr, 90 000 pts, CPH)
+        Best: <strong>2026-10-26 → 2026-11-04</strong>
+        (9 dgr, 90 000 pts, CPH)
       </div>
       
       <details>
-        <summary>Vis alle 26 par</summary>
+        <summary>Vis alle 29 par</summary>
         <table style="margin-top:6px;">
           <thead><tr><th>Ut</th><th>Hjem</th><th>Dgr</th><th>Fra</th><th>Klasse</th><th>Pts</th></tr></thead>
           <tbody>
-          
-            <tr>
-              <td>2026-11-09</td>
-              <td>2026-11-16</td>
-              <td>7</td>
-              <td>CPH→ATL</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
           
             <tr>
               <td>2026-10-26</td>
@@ -2604,15 +2404,6 @@
             </tr>
           
             <tr>
-              <td>2026-10-28</td>
-              <td>2026-11-04</td>
-              <td>7</td>
-              <td>CPH→ATL</td>
-              <td>W</td>
-              <td>90 000</td>
-            </tr>
-          
-            <tr>
               <td>2026-11-02</td>
               <td>2026-11-09</td>
               <td>7</td>
@@ -2634,6 +2425,24 @@
               <td>2026-11-04</td>
               <td>2026-11-11</td>
               <td>7</td>
+              <td>CPH→ATL</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-11-09</td>
+              <td>2026-11-16</td>
+              <td>7</td>
+              <td>CPH→ATL</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-12-04</td>
+              <td>2026-12-13</td>
+              <td>9</td>
               <td>CPH→ATL</td>
               <td>W</td>
               <td>90 000</td>
@@ -2652,6 +2461,15 @@
               <td>2027-01-25</td>
               <td>2027-02-03</td>
               <td>9</td>
+              <td>CPH→ATL</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-28</td>
+              <td>2026-11-04</td>
+              <td>7</td>
               <td>CPH→ATL</td>
               <td>W</td>
               <td>90 000</td>
@@ -2679,6 +2497,24 @@
               <td>2026-11-18</td>
               <td>2026-11-25</td>
               <td>7</td>
+              <td>CPH→ATL</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-12-07</td>
+              <td>2026-12-13</td>
+              <td>6</td>
+              <td>CPH→ATL</td>
+              <td>W</td>
+              <td>90 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-01-11</td>
+              <td>2027-01-17</td>
+              <td>6</td>
               <td>CPH→ATL</td>
               <td>W</td>
               <td>90 000</td>
@@ -2924,6 +2760,24 @@
             </tr>
           
             <tr>
+              <td>2027-01-09</td>
+              <td>2027-01-16</td>
+              <td>7</td>
+              <td>CPH→RAK</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
+              <td>2027-01-09</td>
+              <td>2027-01-23</td>
+              <td>14</td>
+              <td>CPH→RAK</td>
+              <td>J</td>
+              <td>70 000</td>
+            </tr>
+          
+            <tr>
               <td>2027-03-18</td>
               <td>2027-03-23</td>
               <td>5</td>
@@ -3023,6 +2877,15 @@
             </tr>
           
             <tr>
+              <td>2027-04-03</td>
+              <td>2027-04-10</td>
+              <td>7</td>
+              <td>CPH→RAK</td>
+              <td>J</td>
+              <td>85 348</td>
+            </tr>
+          
+            <tr>
               <td>2027-04-17</td>
               <td>2027-04-24</td>
               <td>7</td>
@@ -3059,6 +2922,24 @@
             </tr>
           
             <tr>
+              <td>2027-04-24</td>
+              <td>2027-05-01</td>
+              <td>7</td>
+              <td>CPH→RAK</td>
+              <td>J</td>
+              <td>91 575</td>
+            </tr>
+          
+            <tr>
+              <td>2027-04-24</td>
+              <td>2027-05-08</td>
+              <td>14</td>
+              <td>CPH→RAK</td>
+              <td>J</td>
+              <td>91 575</td>
+            </tr>
+          
+            <tr>
               <td>2027-05-01</td>
               <td>2027-05-08</td>
               <td>7</td>
@@ -3068,57 +2949,12 @@
             </tr>
           
             <tr>
-              <td>2027-03-06</td>
-              <td>2027-03-13</td>
+              <td>2027-02-20</td>
+              <td>2027-02-27</td>
               <td>7</td>
               <td>CPH→RAK</td>
               <td>J</td>
               <td>92 659</td>
-            </tr>
-          
-            <tr>
-              <td>2027-03-25</td>
-              <td>2027-04-03</td>
-              <td>9</td>
-              <td>CPH→RAK</td>
-              <td>J</td>
-              <td>99 364</td>
-            </tr>
-          
-            <tr>
-              <td>2027-01-02</td>
-              <td>2027-01-09</td>
-              <td>7</td>
-              <td>CPH→RAK</td>
-              <td>J</td>
-              <td>105 591</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-13</td>
-              <td>2027-02-27</td>
-              <td>14</td>
-              <td>CPH→RAK</td>
-              <td>J</td>
-              <td>106 651</td>
-            </tr>
-          
-            <tr>
-              <td>2027-02-06</td>
-              <td>2027-02-20</td>
-              <td>14</td>
-              <td>CPH→RAK</td>
-              <td>J</td>
-              <td>112 563</td>
-            </tr>
-          
-            <tr>
-              <td>2027-03-23</td>
-              <td>2027-04-03</td>
-              <td>11</td>
-              <td>CPH→RAK</td>
-              <td>J</td>
-              <td>115 179</td>
             </tr>
           
           </tbody>
@@ -3216,7 +3052,7 @@
   
   <div class="destcard">
     <h4>Mumbai
-      <span class="count has">1480 par</span>
+      <span class="count has">1478 par</span>
     </h4>
     <div class="sub">
       Fly: BOM ·
@@ -3228,20 +3064,47 @@
     
       
       <div style="margin-top:8px;font-size:13px;">
-        Best: <strong>2026-10-01 → 2026-10-14</strong>
-        (13 dgr, 60 000 pts, CPH)
+        Best: <strong>2026-10-15 → 2026-10-24</strong>
+        (9 dgr, 297 556 pts, CPH)
       </div>
       
       <details>
-        <summary>Vis alle 1480 par</summary>
+        <summary>Vis alle 1478 par</summary>
         <table style="margin-top:6px;">
           <thead><tr><th>Ut</th><th>Hjem</th><th>Dgr</th><th>Fra</th><th>Klasse</th><th>Pts</th></tr></thead>
           <tbody>
           
             <tr>
-              <td>2026-10-01</td>
-              <td>2026-10-14</td>
+              <td>2026-10-15</td>
+              <td>2026-10-24</td>
+              <td>9</td>
+              <td>CPH→BOM</td>
+              <td>J</td>
+              <td>297 556</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-15</td>
+              <td>2026-10-25</td>
+              <td>10</td>
+              <td>CPH→BOM</td>
+              <td>J</td>
+              <td>297 556</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-15</td>
+              <td>2026-10-28</td>
               <td>13</td>
+              <td>CPH→BOM</td>
+              <td>J</td>
+              <td>297 556</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-03</td>
+              <td>2026-10-12</td>
+              <td>9</td>
               <td>CPH→BOM</td>
               <td>W</td>
               <td>60 000</td>
@@ -3257,8 +3120,53 @@
             </tr>
           
             <tr>
-              <td>2026-10-04</td>
-              <td>2026-10-14</td>
+              <td>2026-10-03</td>
+              <td>2026-10-16</td>
+              <td>13</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-03</td>
+              <td>2026-10-17</td>
+              <td>14</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-03</td>
+              <td>2026-10-18</td>
+              <td>15</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-03</td>
+              <td>2026-10-19</td>
+              <td>16</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-03</td>
+              <td>2026-10-21</td>
+              <td>18</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-11</td>
+              <td>2026-10-21</td>
               <td>10</td>
               <td>CPH→BOM</td>
               <td>W</td>
@@ -3266,246 +3174,174 @@
             </tr>
           
             <tr>
-              <td>2026-11-15</td>
-              <td>2026-12-04</td>
-              <td>19</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>128 028</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-17</td>
-              <td>2026-12-04</td>
-              <td>17</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>128 028</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-17</td>
-              <td>2026-12-05</td>
-              <td>18</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>128 028</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-19</td>
-              <td>2026-12-04</td>
-              <td>15</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>128 028</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-19</td>
-              <td>2026-12-05</td>
-              <td>16</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>128 028</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-20</td>
-              <td>2026-12-04</td>
-              <td>14</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>128 028</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-20</td>
-              <td>2026-12-05</td>
-              <td>15</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>128 028</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-22</td>
-              <td>2026-12-04</td>
+              <td>2026-10-11</td>
+              <td>2026-10-23</td>
               <td>12</td>
               <td>CPH→BOM</td>
               <td>W</td>
-              <td>128 028</td>
+              <td>60 000</td>
             </tr>
           
             <tr>
-              <td>2026-11-22</td>
-              <td>2026-12-05</td>
+              <td>2026-10-11</td>
+              <td>2026-10-24</td>
               <td>13</td>
               <td>CPH→BOM</td>
               <td>W</td>
-              <td>128 028</td>
+              <td>60 000</td>
             </tr>
           
             <tr>
-              <td>2026-11-24</td>
-              <td>2026-12-04</td>
-              <td>10</td>
+              <td>2026-10-11</td>
+              <td>2026-10-25</td>
+              <td>14</td>
               <td>CPH→BOM</td>
               <td>W</td>
-              <td>128 028</td>
+              <td>60 000</td>
             </tr>
           
             <tr>
-              <td>2026-11-24</td>
-              <td>2026-12-05</td>
-              <td>11</td>
+              <td>2026-10-11</td>
+              <td>2026-10-26</td>
+              <td>15</td>
               <td>CPH→BOM</td>
               <td>W</td>
-              <td>128 028</td>
+              <td>60 000</td>
             </tr>
           
             <tr>
-              <td>2026-11-26</td>
-              <td>2026-12-05</td>
+              <td>2026-10-11</td>
+              <td>2026-10-28</td>
+              <td>17</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-11</td>
+              <td>2026-10-30</td>
+              <td>19</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-15</td>
+              <td>2026-10-24</td>
               <td>9</td>
               <td>CPH→BOM</td>
               <td>W</td>
-              <td>128 028</td>
+              <td>60 000</td>
             </tr>
           
             <tr>
-              <td>2026-11-19</td>
-              <td>2026-12-07</td>
-              <td>18</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-20</td>
-              <td>2026-12-07</td>
-              <td>17</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-20</td>
-              <td>2026-12-09</td>
-              <td>19</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-22</td>
-              <td>2026-12-07</td>
-              <td>15</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-22</td>
-              <td>2026-12-09</td>
-              <td>17</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-22</td>
-              <td>2026-12-11</td>
-              <td>19</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-24</td>
-              <td>2026-12-07</td>
-              <td>13</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-24</td>
-              <td>2026-12-09</td>
-              <td>15</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-24</td>
-              <td>2026-12-11</td>
-              <td>17</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-24</td>
-              <td>2026-12-12</td>
-              <td>18</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-26</td>
-              <td>2026-12-07</td>
-              <td>11</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-26</td>
-              <td>2026-12-09</td>
-              <td>13</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-26</td>
-              <td>2026-12-11</td>
-              <td>15</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-26</td>
-              <td>2026-12-12</td>
-              <td>16</td>
-              <td>CPH→BOM</td>
-              <td>W</td>
-              <td>143 165</td>
-            </tr>
-          
-            <tr>
-              <td>2026-11-27</td>
-              <td>2026-12-07</td>
+              <td>2026-10-15</td>
+              <td>2026-10-25</td>
               <td>10</td>
               <td>CPH→BOM</td>
               <td>W</td>
-              <td>143 165</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-15</td>
+              <td>2026-10-26</td>
+              <td>11</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-15</td>
+              <td>2026-10-28</td>
+              <td>13</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-15</td>
+              <td>2026-10-30</td>
+              <td>15</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-16</td>
+              <td>2026-10-25</td>
+              <td>9</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-16</td>
+              <td>2026-10-26</td>
+              <td>10</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-16</td>
+              <td>2026-10-28</td>
+              <td>12</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-16</td>
+              <td>2026-10-30</td>
+              <td>14</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-16</td>
+              <td>2026-11-04</td>
+              <td>19</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-24</td>
+              <td>2026-11-04</td>
+              <td>11</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-24</td>
+              <td>2026-11-06</td>
+              <td>13</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
+            </tr>
+          
+            <tr>
+              <td>2026-10-24</td>
+              <td>2026-11-07</td>
+              <td>14</td>
+              <td>CPH→BOM</td>
+              <td>W</td>
+              <td>60 000</td>
             </tr>
           
           </tbody>
@@ -4585,7 +4421,7 @@
 
 
 <p class="meta" style="margin-top:40px;">
-  Generert 2026-09-28 05:12 UTC · 160 ruter sjekket
+  Generert 2026-09-28 13:41 UTC · 160 ruter sjekket
 </p>
 </div>
 </body>
